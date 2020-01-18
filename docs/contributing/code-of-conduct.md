@@ -1,50 +1,50 @@
 ---
-title: Gatsby Contributor Covenant Code of Conduct
+title: গ্যাটসবি কনট্রিবিউটরদের আচরণবিধি
 ---
 
-## Our Pledge
+## আমাদের অঙ্গীকার
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+গোষ্ঠীর অবাধ এবং স্বাগতপূর্ণ ভাবমূর্তি বজায় রাখার আগ্রহে, আমরা কনট্রিবিউটর এবং মেনটেইনার হিসেবে অঙ্গীকার করছি যে, এই প্রজেক্ট ও গোষ্ঠীতে যোগদান বয়স, শরীর, অক্ষমতা, জাতি, লিঙ্গ পরিচয় ও অভিব্যক্তি, অভিজ্ঞতা, জাতীয়তা, চেহারা, বর্ণ, ধর্ম, যৌন পরিচয় ও অভিব্যক্তি নির্বিশেষে সবার জন্য একটি হয়রানি-মুক্ত অভিজ্ঞতা করব।
 
-## Our Standards
+## আমাদের মানদন্ড
+ 
+ইতিবাচক পরিবেশ তৈরী করতে ব্যবহারের কিছু উদাহরণ:
 
-Examples of behavior that contributes to creating a positive environment include:
+- স্বাগতপূর্ণ ভাষা ব্যবহার
+- বিভিন্ন দৃষ্টিভঙ্গি এবং অভিজ্ঞতার প্রতি সম্মান
+- মার্জিত ভাবে গঠনমূলক সমালোচনা গ্রহণ
+- গোষ্ঠীর উন্নতিকে প্রাধান্য দেওয়া
+- গোষ্ঠীর বাকি সদস্যদের প্রতি সহমর্মিতা দেখানো
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+গ্রহণযোগ্য নয়, অংশগ্রহণকারীদের এমন আচরণের উদাহরণ:
 
-Examples of unacceptable behavior by participants include:
+- যৌনতাপূর্ণ ভাষা বা চিত্রাবলী এবং অবাঞ্ছিত যৌন আসক্তি বা অগ্রগতি
+- ট্রলিং, অপমানজনক/অসম্মানজনক মন্তব্য এবং ব্যক্তিগত বা রাজনৈতিক আক্রমণ
+- প্রকাশ্য বা ব্যক্তিগত হয়রানি
+- অন্যদের ব্যক্তিগত তথ্য প্রকাশ, যেমন: স্পষ্ট অনুমতি ছাড়া প্রকৃত বা ইলেকট্রনিক ঠিকানা প্রকাশ
+- অন্যান্য আচরণ যা পেশাদার পরিবেশে যুক্তিসঙ্গতভাবে অনুপযুক্ত হিসেবে বিবেচনা করা হয়
 
-- The use of sexualized language or imagery and unwelcome sexual attention or advances
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or electronic address, without explicit permission
-- Other conduct which could reasonably be considered inappropriate in a professional setting
+## আমাদের দায়িত্ব
 
-## Our Responsibilities
+প্রজেক্ট মেনটেইনাররা গ্রহণযোগ্য আচরণের মান ব্যাখ্যা করা এবং অনুপযুক্ত আচরণের জন্য যথোপযুক্ত এবং যথোপযোত সংশোধনমূলক ব্যবস্থা নেয়ার জন্য দায়বদ্ধ।
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+যদি কোনও কমেন্ট, কমিট, কোড, উইকি, ইস্যু এবং বাকি অবদানগুলো আচরণবিধি মেনে না চলে, প্রজেক্ট মেনটেইনারদের তা অপসারণ, সম্পাদনা বা প্রত্যাখ্যান করতে পারে এবং যদি কারো ব্যবহার অনুপযুক্ত, ভীতিপ্রদর্শক, আক্রমণাত্মক বা ক্ষতিকর মনে হলে কনট্রিবিউটরকে অস্থায়ী বা স্থায়ীভাবে নিষিদ্ধ করা হতে পারে।
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this code of conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, divisive, threatening, offensive, or harmful.
+## ব্যাপ্তি
 
-## Scope
+কোনও ব্যক্তি, যে প্রজেক্ট বা গোষ্ঠীর প্রতিনিধিত্ব করছে, তার জন্য এই আচরণবিধি প্রজেক্ট ও প্রকাশ্যে, উভয় ক্ষেত্রেই প্রযোজ্য। প্রজেক্ট বা গোষ্ঠীর প্রতিনিধিত্ব করার উদাহরণ: অফিসিয়াল ইমেইল ব্যবহার করা, অফিসিয়াল সোশ্যাল মিডিয়া একাউন্ট ব্যবহার করা, কোনো অনলাইন বা অফলাইন অনুষ্ঠানে নিযুক্ত প্রতিনিধি হিসেবে কাজ করা। প্রজেক্ট মেনটেইনাররা প্রতিনিধিত্ব-এর সংজ্ঞা আরও ভাল ভাবে ব্যাখ্যা এবং স্পষ্ট করতে পারে।
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
+## প্রয়োগ
 
-## Enforcement
+অপমানজনক, হয়রানী বা গ্রহণযোগ্য নয় এমন আচরণের খবর প্রজেক্ট টিমকে জানানো যাবে [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com) এই ই-মেলে। সব অভিযোগ পর্যালোচনা করা ও তদন্ত করা হবে এবং এই পরিস্থিতিতে যে প্রতিক্রিয়া প্রয়োজনীয় ও উপযুক্ত বলে মনে করা হবে তা প্রয়োগ করা হবে। প্রজেক্ট টিম এই ঘটনার রিপোর্টার সম্পর্কে গোপনীয়তা বজায় রাখতে বাধ্য। নির্দিষ্ট প্রয়োগ নীতিগুলি আরও বিস্তারিতভাবে আলাদা করে পোস্ট করা যেতে পারে।
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+প্রজেক্ট মেনটেইনারদের মধ্যে যারা সরল বিশ্বাসে এই আচরণবিধি অনুসরণ বা প্রয়োগ করবে না, তারা প্রজেক্টের অন্যান্য নেতৃবৃন্দের দ্বারা নির্ধারিত অস্থায়ী বা স্থায়ী প্রতিক্রিয়ার সম্মুখীন হতে পারে।
 
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+কোনও সমস্যার মধ্যস্থতার আন্তরিক চেষ্টার পরে বার বার খারাপ বিশ্বাসের মন্তব্য বা হয়রানির মুখোমুখি হয়ে গেলে, গ্যাটসবি টিম গিটহাবের রিপোসিটোরি থেকে কাউকে অপসারণ করার এবং/অথবা সোশ্যাল মিডিয়াতে ব্লক করার অধিকার সংরক্ষণ করে। এই সিদ্ধান্তটি সর্বদা একাধিক সদস্যের মতামত নিয়ে নেওয়া হবে।
 
-When faced with repeated bad faith comments or harassment after an earnest attempt to mediate an issue, the Gatsby team reserves the right to remove someone from the GitHub repository and/or block them on social media. This decision will always be made with consensus from more than one team member.
+## অধ্যাস
 
-## Attribution
+এই আচরণবিধি Contributor Covenant, version 1.4 থেকে উদ্ভূত হয়েছে।
 
-This Code of Conduct is adapted from the Contributor Covenant, version 1.4.
-
-- homepage: https://contributor-covenant.org
-- version: https://contributor-covenant.org/version/1/4/
+- হোমপেজ: https://www.contributor-covenant.org
+- সংস্করণ: https://www.contributor-covenant.org/bn/version/1/4/code-of-conduct.html
