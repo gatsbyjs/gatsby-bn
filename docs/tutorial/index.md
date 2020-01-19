@@ -1,39 +1,39 @@
 ---
-title: Gatsby.js Tutorials
+title: Gatsby.js টিউটোরিয়াল
 disableTableOfContents: true
 ---
 
-Welcome to Gatsby! We’re glad you’re here. The goal of this tutorial is to guide you through setting up and deploying your first Gatsby site using a starter template. As we walk through that process, we’ll introduce some more general web development topics, and go over the underlying structure of a Gatsby site.
+Gatsby জগতে স্বাগতম! আপনাকে এখানে পেয়ে আমরা অনেক আনন্দিত। একটি স্টার্টার টেম্পলেট দিয়ে আপনার প্রথম Gatsby সাইট তৈরি এবং ডিপ্লয় করতে সাহায্য করাই এই টিউটোরিয়ালের উদ্দেশ্য। আমরা যতই সামনে আগাতে থাকব, ওয়েব ডেভেলপমেন্টের কিছু সাধারণ বিষয় তুলে ধরব এবং Gatsby সাইটের আভ্যন্তরীণ গঠন নিয়েও আলোচনা করব।
 
-> The full tutorial is intended to be as accessible as possible to people without much web development experience (yet!) — no need to be an expert. If you prefer to jump straight to code, feel free to skip the step-by-step tutorial and see the [quick start](/docs/quick-start/) page.
+> এই সম্পূর্ণ টিউটোরিয়ালের উদ্দেশ্য হলো ওয়েব ডেভেলপমেন্ট নিয়ে (এখন পর্যন্ত!) কম অভিজ্ঞতা সম্পন্ন সবাই যেন সহজেই বুঝতে পারে - এ বিষয়ে খুব বেশি অভিজ্ঞ হওয়ার প্রয়োজন নেই। আপনি যদি সরাসরি কোডে যেতে চান, তবে স্টেপ-বাই-স্টেপ টিউটোরিয়ালটি বাদ দিন এবং [জলদি শুরু করুন](/docs/quick-start/) পেইজটি দেখুন।
 
-## Gatsby fundamentals
+## Gatsby মূলভিত্তি
 
-0.  [Set up your development environment](/tutorial/part-zero/): We'll introduce you to core technologies that power Gatsby, and guide you through setting up your development environment.
-1.  [Get to know Gatsby building blocks](/tutorial/part-one/): Starting new projects, developing, and deploying sites.
-1.  [Introduction to using CSS in Gatsby](/tutorial/part-two/): Explore libraries like Typography.js and CSS Modules.
-1.  [Building nested layouts in Gatsby](/tutorial/part-three/): Layouts are sections of your site that are reused across multiple pages like headers and footers.
+0. [আপনার ডেভেলপমেন্ট ইনভায়রনমেন্ট সেটআপ](/tutorial/part-zero/): আমরা আপনাকে এমন কোর টেকনোলজির সাথে পরিচয় করিয়ে দিব যেগুলো Gatsby এর মূলমন্ত্র, এবং আপনার ডেভেলপমেন্ট ইনভায়রনমেন্ট সেটআপে সাহায্য করবে।
+1. [Gatsby এর বিল্ডিং ব্লক জানুন](/tutorial/part-one/): নতুন প্রোজেক্ট শুরু করুন, সাইট ডেভেলপ করা এবং ডিপ্লয় করা শিখুন।
+1. [Gatsby তে CSS ব্যবহারের পরিচিতি](/tutorial/part-two/): Typography.js এবং CSS Modules এর মত লাইব্রেরিগুলো সম্বন্ধে জানুন।
+1. [Gatsby তে নেস্টেড লেআউটগুলি বিল্ডিং](/tutorial/part-three/): লেআউট হলো আপনার সাইটের সেকশন যেগুলো headers এবং footers এর মতো বিভিন্ন পাইজে পুনঃব্যবহার করা হয়।
 
-## Intermediate tutorials
+## ইন্টারমিডিয়েট টিউটোরিয়াল
 
-In these intermediate tutorials, you'll learn how to pull data from almost anywhere into your Gatsby site with GraphQL.
+ইন্টারমিডিয়েট টিউটোরিয়ালে, আপনি শিখবেন কিভাবে আপনার Gatsby সাইটে যেকোন জায়গা থেকে GraphQL দিয়ে ডাটা সংগ্রহ করতে পারবেন।
 
-4.  [Querying for data in a blog](/tutorial/part-four/): Create a blog and use a GraphQL query to pull your site title into the blog header.
-5.  [Source plugins and rendering queried data](/tutorial/part-five/): Use a source plugin to pull Markdown blog posts into your site and create an index page with a list of blog posts.
-6.  [Transformer plugins](/tutorial/part-six/): Use a transformer plugin to transform your Markdown blog posts into a form the blog can render.
-7.  [Programmatically create pages from data](/tutorial/part-seven/): Learn how to programmatically create a set of pages for your blog posts.
-8.  [Preparing a site to go live](/tutorial/part-eight/): Learn how to audit your site for performance and best practices for accessibility, SEO, and more.
+4.  [ব্লগের ডাটার জন্য কোয়েরি](/tutorial/part-four/): একটি ব্লগ তৈরি করুন এবং GraphQL কোয়েরি ব্যবহার করে আপনার সাইটের টাইটেলটি আপনার ব্লগের header এ দেখান।
+5.  [সোর্স প্লাগিন্স এবং কোয়েরি ডাটা রেন্ডারিং](/tutorial/part-five/): সোর্স প্লাগিন ব্যবহার করে আপনার সাইটে মার্কডাউন ব্লগ পোষ্টগুলো সংগ্রহ করুন এবং একটি index পেইজ তৈরি করে ব্লগ পোষ্টগুলোর লিস্ট দেখান।
+6.  [ট্রান্সফরমার প্লাগিন্স](/tutorial/part-six/): ট্রান্সফরমার প্লাগিন ব্যবহার করে মার্কডাউন ব্লগ পোষ্টগুলোকে এমন আকারে রূপান্তর করুন যাতে ব্লগটি সেগুলো রেন্ডার করতে পারে।
+7.  [প্রোগ্রামেটিক্যালি ডাটা থেকে পেইজ তৈরি](/tutorial/part-seven/): আপনার ব্লগ পোস্টের জন্য কিভাবে প্রোগ্রামেটিক্যালি পেইজের সেট তৈরি করবেন শিখুন।
+8.  [একটি সাইট লাইভে যাবার প্রস্তুতি](/tutorial/part-eight/): পারফরমেন্স এবং accessibility, SEO এর বেস্ট প্র্যাকটিস এবং আরও অনেক কিছুর জন্য কিভাবে আপনার সাইটটি অডিট করবেন, শিখুন।
 
-## Theme tutorials
+## থিম টিউটোরিয়াল
 
-Gatsby themes abstract all of your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
+Gatsby থিমগুলি আপনার সকল ডিফল্ট কনফিগারেশনগুলোকে আপনার সাইট থেকে আলাদা করে (শেয়ার্ড ফাংশানালিটি, ডাটা সোর্স, ডিজাইন) এবং ইন্সটল্যাবল প্যাকেজে নিয়ে যায়।
 
-This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+এর মানে কনফিগারেশন এবং ফাংশানালিটি সরাসরি আপনার প্রোজেক্টে লিখা হয় না, বরং ভার্সন করা হয়, কেন্দ্রীয়ভাবে ম্যানেজ করা হয়, এবং ডিপেন্ডেন্সি হিসেবে ইন্সটল করা হয়। আপনি নির্বিঘ্নে একটি থিম আপডেট করতে পারেন, একসাথে থিমগুলো ব্যবহার করতে পারেন, এবং অন্যটির জন্য একটি সামঞ্জস্যপূর্ণ থিমকে পরিবর্তনও করতে পারেন।
 
-Learn more about using and building themes with the [Gatsby theme tutorials](/tutorial/theme-tutorials/).
+থিম তৈরি এবং ব্যবহার সম্বন্ধে বিস্তারিত জানতে [Gatsby থিম টিউটোরিয়াল](/tutorial/theme-tutorials/) দেখুন।
 
-## Additional tutorials
+## বাড়তি টিউটোরিয়াল
 
-There are many use cases for Gatsby, some of which aren't covered in the first set of tutorials to keep you focused while learning. Gatsby's Additional Tutorials section is a collection of resources showing how to complete even more Gatsby tasks step-by-step, such as using source plugins for images and CMS content.
+Gatsby ব্যবহারের অনেক ধরনের উপায় আছে, এর কয়েকটি প্রথম টিউটোরিয়াল সেটগুলোতেই আলোচনা করা হয়েছে, সেখানে আপনাকে শিখানোর দিকেই বেশি নজর দেওয়া হয়েছে। Gatsby এর বাড়তি টিউটোরিয়াল সেকশনটি রিসোর্সের একটি কালেকশন যেখানে কিভাবে Gatsby এর টাস্ক স্টেপ-বাই-স্টেপ করে করা যায় তা  আরও বিস্তারিতভাবে আলোচনা করা হয়েছে, যেমন ইমেজের জন্য সোর্স প্লাগিন ব্যবহার করা এবং CMS কন্টেন্ট।
 
-Go deeper with [additional Gatsby tutorials](/tutorial/additional-tutorials/).
+[বাড়তি Gatsby টিউটোরিয়াল](/tutorial/additional-tutorials/) দিয়ে আরও গভীরে যেতে পারেন।
