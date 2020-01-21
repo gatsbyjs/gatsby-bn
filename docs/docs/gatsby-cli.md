@@ -3,17 +3,17 @@ title: Commands (Gatsby CLI)
 tableOfContentsDepth: 2
 ---
 
-The Gatsby command line tool (CLI) is the main entry point for getting up and running with a Gatsby application and for using functionality including like running a development server and building out your Gatsby application for deployment.
+Gatsby কমান্ড লাইন টুল (CLI) হ'ল Gatsby অ্যাপ্লিকেশনটি চালনা করার জন্য এবং ডেভলপমেন্ট সার্ভার চালানো এবং মোতায়েনের জন্য এবং Gatsby অ্যাপ্লিকেশন তৈরির মতো কার্যকারিতা ব্যবহারের জন্য প্রধান প্রবেশপথ।
 
-_We provide similar documentation available with the gatsby-cli [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md), and our [cheat sheet](/docs/cheat-sheet/) has all the top CLI commands ready to print out._
+_আমরা gatsby-cli [README] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md) এর সাথে অনুরূপ ডকুমেন্টেশন সরবরাহ করি, এবং আমাদের [চিটশীট] (/docs/cheat-sheet)-এ সমস্ত শীর্ষ CLI কমান্ড মুদ্রণের জন্য প্রস্তুত রয়েছে।_
 
-## How to use gatsby-cli
+## কীভাবে gatsby-cli ব্যবহার করবেন
 
-The Gatsby CLI (`gatsby-cli`) is packaged as an executable that can be used globally. The Gatsby CLI is available via [npm](https://www.npmjs.com/) and should be installed globally by running `npm install -g gatsby-cli` to use it locally.
+Gatsby CLI-টি (`gatsby-cli`) প্যাকেজ করা হয়েছে একটি এক্সেকিউটাবল হিসাবে যেটি গ্লোবালি ব্যবহার করা যেতে পারে। Gatsby CLI [npm](https://www.npmjs.com/) থেকে উপলব্ধ এবং এটিকে গ্লোবালি ইনস্টল করে লোকালি ব্যবহার করা যেতে পারে এই কম্যান্ড দ্বারা `npm install -g gatsby-cli`.
 
-Run `gatsby --help` for full help.
+সম্পূর্ণ সহায়তার জন্য দেখবার `gatsby --help` চালান।
 
-You can also use the `package.json` script variant of these commands, typically exposed _for you_ with most [starters](/docs/starters/). For example, if you want to make the [`gatsby develop`](#develop) command available in your application, open up `package.json` and add a script like so:
+আপনি এই কমান্ডগুলির `package.json` স্ক্রিপ্ট রূপটিও ব্যবহার করতে পারেন, সাধারণত বেশিরভাগ [স্টার্টার্স] (/docs/starters/) _দিয়ে আপনার_ কাছে প্রকাশ করা হয়েছে । উদাহরণস্বরূপ, আপনি যদি নিজের অ্যাপ্লিকেশনটিতে [`gatsby develop`] (#develop) কমান্ডটি উপলব্ধ করতে চান তবে ` package.json` খুলুন এবং এই রকম স্ক্রিপ্ট যুক্ত করুন:
 
 ```json:title=package.json
 {
@@ -23,7 +23,7 @@ You can also use the `package.json` script variant of these commands, typically 
 }
 ```
 
-## API commands
+## API কমান্ডস
 
 ### `new`
 
@@ -31,30 +31,30 @@ You can also use the `package.json` script variant of these commands, typically 
 gatsby new [<site-name> [<starter-url>]]
 ```
 
-#### Arguments
+#### আর্গুমেন্টস
 
-| Argument    | Description                                                                                                                                                                                                     |
+| আর্গুমেন্ট | বিবরণ                                                                                                                                                                                                     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                        |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/gatsby-starters/) docs for more information. |
+| site-name   | আপনার Gatsby সাইটের নাম, যা একটি প্রজেক্ট ডিরেক্টরি তৈরি করতেও ব্যবহৃত হয়।                                                                                                                                    |
+| starter-url | Gatsby স্টার্টার URL অথবা লোকাল ফাইল পাথ। ডিফল্ট হলো [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); [Gatsby স্টার্টার্স](/docs/gatsby-starters/) ডকুমেন্টেশন দেখুন আরো তথ্যের জন্য।  |
 
-> Note: The `site-name` should only consist of letters and numbers. If you specify a `.`, `./` or a `<space>` in the name, `gatsby new` will throw an error.
+> দ্রষ্টব্য: `site-name`-এ কেবলমাত্র অক্ষর এবং সংখ্যা থাকা উচিত। যদি নামে একটি `.`,`./` বা একটি `<স্পেস>` উল্লেখ করেন তবে `gatsby new` এরর দেবে।
 
-#### Examples
+#### উদাহরণ
 
-- Create a Gatsby site named `my-awesome-site` using the default starter:
+- ডিফল্ট স্টার্টার ব্যবহার করে `my-awesome-site` নামের একটি Gatsby সাইট বানান:
 
 ```shell
 gatsby new my-awesome-site
 ```
 
-- Create a Gatsby site named `my-awesome-blog-site`, using [gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/):
+- [gatsby-স্টার্টার-ব্লগ](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/) ব্যবহার করে `my-awesome-blog-site` নামে একটি Gatsby সাইট তৈরি করুন:
 
 ```shell
 gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-- If you leave out both of the arguments, the CLI will run an interactive shell asking for these inputs:
+- যদি আপনি দুটো আর্গুমেন্ট-ই উল্লেখ না করেন, CLI এই ইনপুটগুলির জন্য জিজ্ঞাসা করে একটি ইন্টারেক্টিভ শেল চালাবে::
 
 ```shell
 gatsby new
@@ -66,35 +66,34 @@ gatsby new
    (Use a different starter)
 ```
 
-See the [Gatsby starters docs](https://www.gatsbyjs.org/docs/gatsby-starters/) for more details.
+আরও বিশদের জানার জন্য [Gatsby স্টার্টার্স ডক্স](https://www.gatsbyjs.org/docs/gatsby-starters/) দেখুন।
 
 ### `develop`
 
-Once you've installed a Gatsby site, go to the root directory of your project and start the development server:
+আপনি Gatsby সাইট ইনস্টল করার পরে, আপনার প্রজেক্টের রুট ডিরেক্টরিতে যান এবং ডেভেলপমেন্ট সার্ভারটি শুরু করুন:
 
 `gatsby develop`
 
-#### Options
+#### অপশন
 
-|     Option      | Description                                     |
+|     অপশন        | বিবরণ                                            |
 | :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to 8000                      |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
+| `-H`, `--host`  | হোস্ট সেট করে। ডিফাল্ট হলো localhost                   |
+| `-p`, `--port`  | পোর্ট সেট করে। ডিফাল্ট হলো 8000                        |
+| `-o`, `--open`  | সাইটটিকে আপনার (ডিফল্ট) ব্রাউজারে খোলে                   |
+| `-S`, `--https` | HTTPS ব্যবহার করে                                   |
 
-Follow the [Local HTTPS guide](/docs/local-https/)
-to find out how you can set up an HTTPS development server using Gatsby.
+আপনি কীভাবে Gatsby ব্যবহার করে HTTPS ডেভেলপমেন্ট সার্ভার সেট আপ করতে পারেন তা জানতে [লোকাল HTTPS গাইড](/docs/local-https/) অনুসরণ করুন।
 
-#### Preview changes on other devices
+#### অন্যান্য ডিভাইসে পরিবর্তনগুলির প্রিভিউ দেখুন
 
-You can use the Gatsby develop command with the host option to access your dev environment on other devices on the same network, run:
+আপনি একই নেটওয়ার্কের অন্যান্য ডিভাইসে আপনার ডেভ পরিবেশটি অ্যাক্সেস করতে হোস্ট অপশনের সাহায্যে Gatsby ডেভেলপ কমান্ড ব্যবহার করতে পারেন, চালান:
 
 ```shell
 gatsby develop -H 0.0.0.0
 ```
 
-Then the terminal will log information as usual, but will additionally include a URL that you can navigate to from a client on the same network to see how the site renders.
+তারপরে টার্মিনালটি যথারীতি তথ্য লগ করবে, তবে সেই সাথে একটি URL যুক্ত করবে যা আপনি একই নেটওয়ার্কের কোনও ক্লায়েন্টের কাছ থেকে নেভিগেট করতে পারবেন সাইটটি কীভাবে রেন্ডার করে তা দেখতে।
 
 ```
 You can now view gatsbyjs.org in the browser.
@@ -103,84 +102,84 @@ You can now view gatsbyjs.org in the browser.
   On Your Network:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-**Note**: you can't visit 0.0.0.0:8000 on Windows (but things will work using either localhost:8000 or the "On Your Network" URL on Windows)
+**দ্রষ্টব্য**: আপনি উইন্ডোজে 0.0.0.0.8000 দেখতে পারবেন না (তবে localhost: 8000 বা উইন্ডোজে "On Your Network" URL ব্যবহার করে কাজ করবে)
 
 ### `build`
 
-At the root of a Gatsby site, compile your application and make it ready for deployment:
+Gatsby সাইটের রুটে আপনার অ্যাপ্লিকেশনটি কপিলে করুন এবং এটি ডেপ্লয়মেন্টের জন্য প্রস্তুত করুন:
 
 `gatsby build`
 
-#### Options
+#### অপশন
 
-|            Option            | Description                                                                                               |
-| :--------------------------: | --------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                       |
-|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                   |
-| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/) |
-| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                          |
+|            অপশন              | বিবরণ                                                                                        |
+| :--------------------------: | --------------------------------------------------------------------------------------------|
+|       `--prefix-paths`       | উপসর্গযুক্ত লিঙ্ক পাথ সহ সাইট তৈরি করুন (আপনার কনফিগারেশনে pathPrefix সেট করুন)                            |
+|        `--no-uglify`         | JS বান্ডিলগুলিকে অগলিফাই না করে সাইট তৈরি করুন (ডিবাগিংয়ের জন্য)                                          |
+| `--open-tracing-config-file` | ট্রেসার কনফিগারেশন ফাইল (OpenTracing কমপ্যাটিবল)। [পারফরম্যান্স ট্রেসিং](/docs/performance-tracing/) দেখুন      |
+| `--no-color`, `--no-colors`  | রঙিন টার্মিনাল আউটপুট দেখানো বন্ধ করে                                                                 |
 
-In addition to these build options, there are some optional [build environment variables](/docs/environment-variables/#build-variables) for more advanced configurations that can adjust how a build runs. For example, setting `CI=true` as an environment variable will tailor output for [dumb terminals](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
+এই বিল্ড অপশনগুলি ছাড়াও আরও অ্যাডভান্সড কনফিগারেশনের জন্য কিছু ঐচ্ছিক [বিল্ড এনভায়রনমেন্ট ভেরিয়েবল](/docs/environment-variables/#build-variables) রয়েছে যা কোনও বিল্ড কীভাবে চালায় তা সজ্জিত করতে পারে। উদাহরণস্বরূপ, `CI=true` এনভায়রনমেন্ট ভেরিয়েবল হিসাবে নির্ধারণ করলে এটি [ডাম্ব টার্মিনালের](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals) জন্য আউটপুট নির্ধারণ করবে।
 
 ### `serve`
 
-At the root of a Gatsby site, serve the production build of your site for testing:
+Gatsvy সাইটের রুটে, পরীক্ষণের জন্য আপনার সাইটের প্রোডাকশন বিল্ড পরিবেশন করুন:
 
 `gatsby serve`
 
-#### Options
+#### অপশন
 
-|      Option      | Description                                                                              |
+|      অপশন        | বিবরণ                                                                              |
 | :--------------: | ---------------------------------------------------------------------------------------- |
-|  `-H`, `--host`  | Set host. Defaults to localhost                                                          |
-|  `-p`, `--port`  | Set port. Defaults to 9000                                                               |
-|  `-o`, `--open`  | Open the site in your (default) browser for you                                          |
-| `--prefix-paths` | Serve site with link paths prefixed (if built with pathPrefix in your gatsby-config.js). |
+|  `-H`, `--host`  | হোস্ট সেট করে। ডিফাল্ট হলো localhost                                                            |
+|  `-p`, `--port`  | পোর্ট সেট করে। ডিফাল্ট হলো 9000                                                                 |
+|  `-o`, `--open`  | সাইটটিকে আপনার (ডিফল্ট) ব্রাউজারে খোলে                                                            |
+| `--prefix-paths` | উপসর্গযুক্ত লিঙ্ক পাথগুলির সাথে সাইট সার্ভ করে (যদি আপনার gatsby-config.js- এ pathPrefix এর উল্লেখ থাকে)।  |
 
 ### `info`
 
-At the root of a Gatsby site, get helpful environment information which will be required when reporting a bug:
+Gatsby সাইটের রুটে, এনভায়রনমেন্ট সম্পর্কিত কার্যকর তথ্য পান যা বাগ রিপোর্ট করার সময় প্রয়োজনীয় হবে:
 
 `gatsby info`
 
-#### Options
+#### অপশন
 
-|       Option        | Description                                             |
+|       অপশন          | বিবরণ                                                      |
 | :-----------------: | ------------------------------------------------------- |
-| `-C`, `--clipboard` | Automagically copy environment information to clipboard |
+| `-C`, `--clipboard` | স্বয়ংক্রিয়ভাবে ক্লিপবোর্ডে এনভিরনমেন্টের তথ্য অনুলিপি করুন                 |
 
 ### `clean`
 
-At the root of a Gatsby site, wipe out the cache (`.cache` folder) and public directories:
+Gatsby সাইটের রুটে, cache (`cache` ফোল্ডার) এবং পাবলিক ডিরেক্টরিগুলি রিমুভ করতে:
 
 `gatsby clean`
 
-This is useful as a last resort when your local project seems to have issues or content does not seem to be refreshing. Issues this may fix commonly include:
+এটি যখন আপনার লোকাল প্রজেক্টে সমস্যা দেখা দেয় বা কনটেন্ট রিফ্রেশ হচ্ছে না বলে মনে হয় তখন এটি সর্বশেষ অবলম্বন হিসাবে কার্যকর।সাধারণত এই সমস্যাগুলি এটি সমাধান করতে পারে:
 
-- Stale data, e.g. this file/resource/etc. isn't appearing
-- GraphQL error, e.g. this GraphQL resource should be present but is not
-- Dependency issues, e.g. invalid version, cryptic errors in console, etc.
-- Plugin issues, e.g. developing a local plugin and changes don't seem to be taking effect
+- নূতনত্বহীন ডেটা, উদাঃ এই ফাইল / রিসোর্স / ইত্যাদি দেখা যাচ্ছে না
+- গ্রাফকিউএল ত্রুটি, উদাঃ এই GraphQL উত্স উপস্থিত থাকা উচিত তবে তা নয়
+- ডিপেন্ডেন্সি সংক্রান্ত সমস্যাগুলি, উদাঃ অবৈধ সংস্করণ, কনসোলে ক্রিপ্টিক ত্রুটি ইত্যাদি
+- প্লাগইন সমস্যা, উদাঃ একটি লোকাল প্লাগইন ডেভেলপমেন্ট এবং পরিবর্তনগুলি কার্যকর হচ্ছে না বলে মনে হচ্ছে
 
 ### `plugin`
 
-Run commands pertaining to gatsby plugins.
+Gatsby প্লাগইন সম্পর্কিত কমান্ডগুলি চালান।
 
 #### `docs`
 
 `gatsby plugin docs`
 
-Directs you to documentation about using and creating plugins.
+প্লাগইন ব্যবহার এবং তৈরি সম্পর্কে ডকুমেন্টেশনে যাওয়ার নির্দেশ দেখায়।
 
 ### Repl
 
-Get a Node.js REPL (interactive shell) with context of your Gatsby environment:
+আপনার Gatsby এনভায়রনমেন্ট প্রাসঙ্গিক একটি Node.js REPL (ইন্টারেক্টিভ শেল) পান:
 
 `gatsby repl`
 
-Gatsby will prompt you to type in commands and explore. When it shows this: `gatsby >`
+গ্যাটসবি আপনাকে কমান্ড টাইপ করতে এবং এক্সপ্লোর করতে অনুরোধ করবে। যখন এটি দেখায়: `gatsby >`
 
-You can type in a command, such as one of these:
+আপনি একটি কমান্ড টাইপ করতে পারেন, যেমন এইগুলির মধ্যে একটি:
 
 `babelrc`
 
@@ -200,17 +199,17 @@ You can type in a command, such as one of these:
 
 `staticQueries`
 
-When combined with the [GraphQL explorer](/docs/introducing-graphiql/), these REPL commands could be very helpful for understanding your Gatsby site's data.
+যখন GraphQL এক্সপ্লোরারের সাথে একত্রিত হয়, তখন এই REPL কমান্ডগুলি আপনার Gatsby সাইটের ডেটা বোঝার জন্য খুব সহায়ক হতে পারে।
 
-For more information, check out the [Gatsby REPL documentation](/docs/gatsby-repl/).
+আরও তথ্যের জন্য, [Gatsby REPL ডকুমেন্টেশন](/docs/gatsby-repl/) দেখুন।
 
 ### Disabling colored output
 
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
+সুস্পষ্ট `--no-color` অপশনের পাশাপাশি, CLI NO_COLOR এনভায়রনমেন্ট ভ্যারিয়েবলের উপস্থিতির সম্মান করে ([no-color.org](https://no-color.org/) দেখুন)।
 
-## How to change your default package manager for your next project?
+## আপনার পরবর্তী প্রজেক্টের জন্য আপনার ডিফল্ট প্যাকেজ ম্যানেজারকে কীভাবে পরিবর্তন করবেন?
 
-When you use `gatsby new` for the first time to create a new project, you are asked to choose your default package manager between yarn and npm.
+আপনি যখন প্রথমবার নতুন প্রজেক্ট তৈরির জন্য `gatsby new` ব্যবহার করেন, তখন আপনাকে yarn এবং npm-এর  মধ্যে আপনার ডিফল্ট প্যাকেজ ম্যানেজার চয়ন করতে বলা হয়।
 
 ```shell
 Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
@@ -218,12 +217,12 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Once you’ve made your choice, the CLI won’t ask for your preference again for any subsequent project.
+একবার আপনি নিজের পছন্দ হয়ে গেলে, CLI পরবর্তী কোনও প্রজেক্টের জন্য আবার আপনার পছন্দ জিজ্ঞাসা করবে না।
 
-If you want to change this for your next project you have to edit the config file created automatically by the CLI.
-This file is available on your system at: `~/.config/gatsby/config.json`
+আপনি যদি আপনার পরবর্তী প্রকল্পের জন্য এটি পরিবর্তন করতে চান তবে আপনাকে CLI দ্বারা স্বয়ংক্রিয়ভাবে তৈরি করা কনফিগার ফাইলটি সম্পাদনা করতে হবে।
+এই ফাইলটি আপনার সিস্টেমে এখানে উপলব্ধ: `~ / .config / gatsby / config.json`
 
-In it you’re going to see something like this.
+এটিতে আপনি এরকম কিছু দেখতে পাবেন।
 
 ```json:title=config.json
 {
@@ -233,4 +232,4 @@ In it you’re going to see something like this.
 }
 ```
 
-Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
+আপনার `packageManager` ভ্যালুটি সম্পাদনা করুন, সেভ করুন এবং আপনি `gatsby new` ব্যবহার করে আপনার পরবর্তী প্রজেক্ট শুরু করতে পারেন।
