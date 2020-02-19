@@ -19,7 +19,13 @@ title: জলদি শুরু করুন
 npm install -g gatsby-cli
 ```
 
+<<<<<<< HEAD
 ### একটি নতুন সাইট তৈরি করুন
+=======
+> The above command installs Gatsby CLI globally on your machine.
+
+### Create a new site
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ```shell
 gatsby new gatsby-site
@@ -37,7 +43,11 @@ cd gatsby-site
 gatsby develop
 ```
 
+<<<<<<< HEAD
 Gatsby একটি হট-রিলোডিং ডেভেলপমেন্ট ইনভায়রনমেন্ট চালু করবে যা প্রাথমিকভাবে `localhost:8000` এই ঠিকানায় পাওয়া যায়।
+=======
+Gatsby will start a hot-reloading development environment accessible by default at `http://localhost:8000`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 `src/pages` এর জাভাস্ক্রিপ্ট পেইজগুলো এডিট করার চেষ্টা করে দেখুন। সেইভ করা পরিবর্তনগুলো সাথে সাথেই ব্রাউজারে দেখা যাবে।
 
