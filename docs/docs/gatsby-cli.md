@@ -27,7 +27,7 @@ Gatsby CLI-টি (`gatsby-cli`) প্যাকেজ করা হয়েছে
 
 ### `new`
 
-```
+```shell
 gatsby new [<site-name> [<starter-url>]]
 ```
 
@@ -96,7 +96,7 @@ gatsby develop -H 0.0.0.0
 
 তারপরে টার্মিনালটি যথারীতি তথ্য লগ করবে, তবে সেই সাথে একটি URL যুক্ত করবে যা আপনি একই নেটওয়ার্কের কোন ক্লায়েন্টের কাছ থেকে নেভিগেট করতে পারবেন সাইটটি কীভাবে রেন্ডার করে তা দেখতে।
 
-```
+```shell
 You can now view gatsbyjs.org in the browser.
 ⠀
   Local:            http://0.0.0.0:8000/
