@@ -1,9 +1,8 @@
 ---
 title: Gatsby.js ডকুমেন্টেশন
+description: Gatsby এর মাধ্যমে তৈরি করার টিউটোরিয়াল, গাইড এবং তথ্যের অন্যতম উৎস
 disableTableOfContents: true
 ---
-
-import EmailCaptureForm from "../../www/src/components/email-capture-form"
 
 Gatsby React এর জন্য তৈরি করা একটি প্রচন্ড দ্রুত আধুনিক সাইট জেনারেটর। 
 
