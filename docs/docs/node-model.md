@@ -6,7 +6,7 @@ apiCalls: NodeModel
 contentsHeading: Methods
 ---
 
-Gatsby তার অভ্যন্তরীণ ডেটা স্টোর এবং ক্যোয়ারী ক্ষমতা GraphQL ফিল্ড রিসোলভারগুলিকে `context.nodeModel`-তে প্রকাশ করে।
+Gatsby তার অভ্যন্তরীণ ডেটা স্টোর এবং ক্যোয়ারী ক্ষমতা GraphQL ফিল্ড রিসোলভারগুলিকে `context.nodeModel`-এ প্রকাশ করে।
 
 ## ব্যবহারের উদাহরণ
 
