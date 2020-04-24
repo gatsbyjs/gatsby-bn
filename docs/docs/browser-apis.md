@@ -6,6 +6,6 @@ apiCalls: BrowserAPI
 showTopLevelSignatures: true
 ---
 
-## Usage
+## ব্যবহারবিধি
 
 আপনার প্রোজেক্টের রুটে `gatsby-browser.js` নামের একটি ফাইল থেকে এক্সপোর্ট করে এই ধরণের যেকোনো API ব্যবহার করুন।
