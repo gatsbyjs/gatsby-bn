@@ -1,14 +1,14 @@
 ---
-title: Node Model
-description: Documentation explaining the model of nodes in Gatsby's GraphQL data layer
+title: নোড মডেল
+description: এই ডকুমেন্টেশনটি Gatsby-র GraphQL ডেটা লেয়ারের নোড মডেলগুলিকে ব্যাখ্যা করে
 jsdoc: ["gatsby/src/schema/node-model.js"]
 apiCalls: NodeModel
 contentsHeading: Methods
 ---
 
-Gatsby exposes its internal data store and query capabilities to GraphQL field resolvers on `context.nodeModel`.
+`context.nodeModel` এর মাধ্যমে Gatsby তার অভ্যন্তরীণ ডেটা স্টোর এবং ক্যোয়ারী ক্ষমতাকে GraphQL ফিল্ড রিসোলভারগুলোতে প্রকাশ করে।
 
-## Example Usage
+## ব্যবহারবিধি
 
 ```javascript:title=gatsby-node.js
 createResolvers({
