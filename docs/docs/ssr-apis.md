@@ -1,11 +1,11 @@
 ---
-title: Gatsby Server Rendering APIs
-description: Documentation on APIs related to server side rendering during Gatsby's build process
+title: Gatsby সার্ভার রেন্ডারিং API-সমূহ
+description: Gatsby-এর বিল্ড প্রসেস চলাকালীন সার্ভার সাইড রেন্ডারিং সম্পর্কিত API-সমূহের ডকুমেন্টেশন
 jsdoc: ["gatsby/cache-dir/api-ssr-docs.js"]
 apiCalls: SSRAPI
 showTopLevelSignatures: true
 ---
 
-## Usage
+## ব্যবহারবিধি
 
-Implement any of these APIs by exporting them from a file named `gatsby-ssr.js` in the root of your project.
+আপনার প্রজেক্টের রুটে এই API-সমূহের মধ্যে যেকোনটি ইমপ্লিমেন্ট করতে পারেন `gatsby-ssr.js` নামের একটি ফাইল থেকে এক্সপোর্ট করে।
