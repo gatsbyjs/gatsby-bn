@@ -1,10 +1,10 @@
 ---
-title: API Files
+title: API ফাইলসমূহ
 ---
 
-Gatsby uses 4 files in the root of your project to configure your site and control its behavior. All of these files are optional.
+Gatsby ৪টি ফাইল ব্যবহার করে আপনার সাইট সজ্জিত করে এবং এর আচরণ নিয়ন্ত্রণ করে, এই ফাইলগুলো আপনার প্রজেক্টের মূল ফোল্ডারে অবস্থিত। এই ফাইলগুলো ঐচ্ছিক।
 
-- [gatsby-config.js](/docs/api-files-gatsby-config) - Enables plugins, defines common site data, and contains other site configuration that integrates with Gatsby's GraphQL data layer.
-- [gatsby-browser.js](/docs/api-files-gatsby-browser) - Gives you control over Gatsby's behavior in the browser. For example, responding to a user changing routes, or calling a function when the user first opens any page.
-- [gatsby-node.js](/docs/api-files-gatsby-node) - Allows you to respond to events in the Gatsby build cycle. For example, adding pages dynamically, editing GraphQL nodes as they are created, or performing an action after a build is complete.
-- [gatsby-ssr.js](/docs/api-files-gatsby-ssr) - Exposes Gatsby's server-side rendering process so you can control how it builds your HTML pages.
+- [gatsby-config.js](/docs/api-files-gatsby-config) - Plugin সক্রিয় করে, সাধারণ সাইট ডাটা সংজ্ঞায়িত করে এবং সাইট সম্পর্কিত অন্যান্য ডাটা সংরক্ষণ করে যা Gatsby এর GraphQL এর ডাটা ভাণ্ডারের সাথে সংযোজিত করে।
+- [gatsby-browser.js](/docs/api-files-gatsby-browser) - ব্রাউজারে Gatsby এর আচরণের উপর আপনার নিয়ন্ত্রণ প্রতিষ্ঠা করে। যেমনঃ ইউজারের route পরিবর্তনের প্রতিক্রিয়া অথবা ইউজার কোনো পেজ এ প্রথমবার গেলে একটি function চালু করা।
+- [gatsby-node.js](/docs/api-files-gatsby-node) - আপনাকে Gatsby এর build cycle এর কোনো ঘটনায় সাড়া দিতে সহায়তা করে। যেমনঃ Dynamically পেজ সংযোজন করা, GraphQL নোড সম্পাদনা করা যখন তা তৈরি করা হচ্ছে অথবা কোনো কাজ সম্পাদন করা বিল্ড হওয়ার পর।
+- [gatsby-ssr.js](/docs/api-files-gatsby-ssr) - Gatsby এর server-side রেন্ডার প্রক্রিয়াকে প্রকাশ করে, যাতে আপনি নিয়ন্ত্রণ করতে পারেন কিভাবে আপনার HTML পেজ তৈরি করা হবে।
