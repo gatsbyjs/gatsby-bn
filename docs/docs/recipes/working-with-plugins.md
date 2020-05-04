@@ -1,34 +1,34 @@
 ---
-title: "Recipes: Working with Plugins"
+title: "রেসিপিঃ প্লাগিন নিয়ে কাজ করা"
 tableOfContentsDepth: 1
 ---
 
-A [Gatsby plugin](/docs/what-is-a-plugin/) abstracts Gatsby APIs into an installable package. This means that modular chunks of Gatsby functionality aren’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can add external data, transform data, add third-party services (e.g. Google Analytics, Stripe), and more.
+একটি [Gatsby প্লাগিন](/docs/what-is-a-plugin/) Gatsby API-গুলোকে একটি ইন্সটল করা যায় এমন প্যাকেজে নিয়ে আসে। এর মানে আপনার প্রজেক্টে বিভিন্ন Gatsby ফাংশনালিটি সরাসরি সংযুক্ত হয়না, বরং কেন্দ্রীয়ভাবে নিয়ন্ত্রিত ভার্সনিং এর মাধ্যমে একটি ডিপেন্ডেন্সি হিসবে ইন্সটল হয়। আপনি এক্সটার্নাল ডাটা, ট্রান্সফর্ম ডাটা,থার্ড-পার্টি সার্ভিসসহ(যেমনঃ Google Analytics, Stripe) আরও অনেককিছুই আপনার প্রজেক্টে সংযুক্ত করতে পারেন।
 
-## Using a plugin
+## একটি প্লাগিন ব্যবহার করা
 
-Found a plugin you'd like to use in your project? Awesome! You can configure it for use by following the steps below. This recipe uses the [`gatsby-source-filesystem` plugin](/packages/gatsby-source-filesystem/) as an example.
+একটি প্লাগিন পেয়েছেন যা আপনার প্রজেক্টে ব্যবহার করতে চান? জোস! আপনি এটি ব্যবহার করার জন্য নিচের ধাপগুলি অনুসরণ করতে পারেন। এই রেসিপিতে উদাহরণস্বরূপ [`gatsby-source-filesystem` প্লাগিনটি](/packages/gatsby-source-filesystem/) ব্যবহার করা হয়েছে।
 
-> If you'd like to take a look at available plugins, check out the [plugin library](/plugins).
+> কি কি প্লাগিন আপনি ব্যবহার করতে পারবেন জানতে [plugin library](/plugins) থেকে ঘুরে আসতে পারেন।
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-install-and-use-a-plugin-in-a-gatsby-site"
   lessonTitle="Install and use a plugin in a Gatsby site"
 />
 
-### Prerequisites
+### যা যা লাগবে
 
-- An existing [Gatsby site](/docs/quick-start/) with a `gatsby-config.js` file
+- একটি তৈরিকৃত [Gatsby সাইট](/docs/quick-start/) যাতে `gatsby-config.js` ফাইলটি আছে
 
-### Directions
+### ধাপসমূহ
 
-1. Install the `gatsby-source-filesystem` plugin by running the following command:
+১. `gatsby-source-filesystem` প্লাগিনটি নিচের কমান্ডটি চালানোর মাধ্যমে ইন্সটল করুনঃ
 
 ```shell
 npm install gatsby-source-filesystem
 ```
 
-2. Add the plugin to your `gatsby-config.js`, and set any options it needs, the filesystem source plugin takes a `name` and `path` as options:
+২. আপনার `gatsby-config.js` ফাইলে প্লাগিনটি সংযুক্ত করুন, এবং যা যা অপশন দরকার সেট করুন, ফাইল সিস্টেম সোর্স প্লাগিনটি একটি `name` এবং `path` অপশন হিসেবে গ্রহণ করেঃ
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -46,32 +46,32 @@ module.exports = {
 }
 ```
 
-_The instructions found in the README of the plugin you're using can you help you determine specifics about what configurations (if any) it requires. For this example to have an effect in your own site, you would need to create the `src/images` folder and place files inside of it._
+_আপনি যেই প্লাগিনটি ব্যবহার করছেন তার README ফাইলের নির্দেশনাসমূহ আপনাকে কি কি অপশন লাগবে(যদি লাগে) তা জানতে সাহায্য করতে পারে। এই উদাহরণ আপনার সাইটে প্রভাব ফেলার জন্য আপনার একটি `src/images` ফোল্ডার তৈরি করতে হবে এবং এর ভেতর ফাইল রাখতে হবে।_
 
-3. Run `gatsby develop`, your plugin should run as your site builds.
+৩. `gatsby develop` রান করুন, আপনার প্লাগিন সাইট বিল্ড হওয়ার সাথে সাথে রান হবে।
 
-### Additional resources
+### অতিরিক্ত রিসোর্স
 
-- Learn more about configuring options or using default options in the [Using a Plugin in Your Site](/docs/using-a-plugin-in-your-site/) guide.
-- See an example Gatsby site using this configuration in [the repo for the default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default/blob/master/gatsby-config.js).
+- [আপনি সাইটে একটি প্লাগিন ব্যবহার করুন](/docs/using-a-plugin-in-your-site/) গাইডে অপশন কনফিগার করা এবং ডিফল্ট সেট করা সম্পর্কে আরও জানতে পারবেন।
+- এই কনফিগারেশন ব্যবহার করে এমন একটি উদাহরণ Gatsby সাইট দেখতে [ডিফল্ট Gatsby স্টার্টার রিপোজিটরিটি](https://github.com/gatsbyjs/gatsby-starter-default/blob/master/gatsby-config.js) দেখতে পারেন।
 
-## Creating a new plugin using a plugin starter
+## একটি প্লাগিন স্টার্টার ব্যবহার করে একটি প্লাগিন তৈরি করুন
 
-If you want to create your own plugin you can get started with the Gatsby plugin starter.
+আপনি যদি আপনার নিজের প্লাগিন তৈরি করতে চান তাহলে Gatsby প্লাগিন স্টার্টার ব্যবহার করে শুরু করতে পারেন।
 
-### Prerequisites
+### যা যা লাগবে
 
-- An existing [Gatsby site](/docs/quick-start/) with a `gatsby-config.js` file
+- একটি তৈরিকৃত [Gatsby সাইট](/docs/quick-start/) যাতে `gatsby-config.js` ফাইলটি আছে
 
-### Directions
+### ধাপসমূহ
 
-1. _Outside_ of your Gatsby site, generate a new plugin based on the starter using the `gatsby new` command:
+১. আপনার Gatsby সাইটের _বাইরে_ `gatsby new` কমান্ডের সাহায্যে স্টার্টারের উপর ভিত্তি করে একটি নতুন প্লাগিন তৈরি করুনঃ
 
 ```shell
 gatsby new my-plugin https://github.com/gatsbyjs/gatsby-starter-plugin
 ```
 
-The directory structure should look something like this:
+আপনার ফোল্ডার স্ট্রাকচার দেখতে কিছুটা এমন হওয়া উচিতঃ
 
 ```text
 gatsby-site
@@ -87,7 +87,7 @@ my-plugin
 └── package.json
 ```
 
-2. Add the plugin to your site's `gatsby-config.js`, linking it to your local plugin's root folder with `require.resolve`. The path (or name of the plugin) should be to the directory name you used when generating the plugin:
+২. আপনার সাইটের `gatsby-config.js` প্লাগিনটি সংযুক্ত করুন, আপনার লোকাল প্লাগিনের রুট ফোল্ডারের সাথে `require.resolve` এর মাধ্যমে লিংক করে। এই ক্ষেত্রে পাথ (অথবা প্লাগিনের নাম) আপনি প্লাগিন তৈরি করার সময় যে ফোল্ডারের নাম ব্যবহার করেছেন তার হতে হবে।
 
 ```javascript:title=gatsby-site/gatsby-config.js
 module.exports = {
@@ -97,7 +97,7 @@ module.exports = {
 }
 ```
 
-3. Run `gatsby develop`. To verify the plugin starter loaded correctly in your site it will log a message to the console saying it "Loaded" before the `onPreInit` step finishes:
+৩. `gatsby develop` রান করুন। প্লাগিন স্টার্টারটি ঠিকমত আপনার সাইটে লোড হয়েছে নাকি যাচাই করার জন্য এটি `onPreInit` ধাপ শেষ হওয়ার পূর্বে কনসোলে "Loaded" একটি মেসেজ দেখাবেঃ
 
 ```shell
 $ gatsby develop
@@ -108,8 +108,8 @@ success onPreInit - 0.016s
 ...
 ```
 
-4. Now you can implement [browser](/docs/browser-apis/), [server-side rendering](/docs/ssr-apis/), or [node APIs](/docs/node-apis/) and your site will run them each time it loads your plugin!
+৪. এখন আপনি [ব্রাউজার](/docs/browser-apis/), [সার্ভার-সাইড রেন্ডারিং](/docs/ssr-apis/), অথবা [নোড API-গুলো](/docs/node-apis/) ইমপ্লিমেন্ট করতে পারবেন এবং আপনার সাইট তা রান করবে যখনই আপনার প্লাগিন লোড হবে!
 
-### Additional resources
+### অতিরিক্ত রিসোর্স
 
-- Read about creating and loading your own plugins in development in the [Creating a Local Plugin](/docs/creating-a-local-plugin/) guide
+- ডেভেলপমেন্টে আপনার নিজের প্লাগিন তৈরি এবং লোড করার সম্পর্কে বিস্তারিত জানতে [একটি লোকাল প্লাগিন তৈরি করুন](/docs/creating-a-local-plugin/) গাইডটি দেখতে পারেন
