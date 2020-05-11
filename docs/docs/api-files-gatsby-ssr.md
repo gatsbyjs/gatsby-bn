@@ -1,23 +1,23 @@
 ---
-title: The gatsby-ssr.js API file
+title: gatsby-ssr.js API ফাইল
 ---
 
-The file `gatsby-ssr.js` lets you alter the content of static HTML files as they are being Server-Side Rendered (SSR) by Gatsby and Node.js. To use the [Gatsby SSR APIs](/docs/ssr-apis/), create a file called `gatsby-ssr.js` in the root of your site. Export any of the APIs you wish to use in this file.
+`gatsby-ssr.js` ফাইলটি আপনাকে স্ট্যাটিক HTML ফাইলের কন্টেন্ট পরিবর্তন করতে সহায়তা করে যখন এটি Gatsby এবং Node.js দ্বারা সার্ভার-সাইডে রেন্ডার(SSR) হয়। [Gatsby SSR API-সমূহ](/docs/ssr-apis/) ব্যবহার করার জন্য, আপনার সাইটের রুটে `gatsby-ssr.js` নামের একটি ফাইল তৈরি করুন। আপনি যেই API-গুলো ব্যবহার করতে চান তা এই ফাইলে এক্সপোর্ট করুন।
 
-The APIs `wrapPageElement` and `wrapRootElement` exist in both the SSR and [browser APIs](/docs/browser-apis). If you use one of them, consider if you should implement it in both `gatsby-ssr.js` and `gatsby-browser.js` so that pages generated through SSR with Node.js are the same after being [hydrated](/docs/glossary#hydration) with browser JavaScript.
+`wrapPageElement` এবং `wrapRootElement` API-গুলো SSR এবং [ব্রাউজার](/docs/browser-apis) উভয় API তেই পাওয়া যায়। আপনি যদি এদের মধ্যে কোনো একটি ব্যবহার করে থাকেন, তাহলে `gatsby-ssr.js` এবং `gatsby-browser.js` দুই জায়গাতেই ইমপ্লিমেন্ট করবেন নাকি বিবেচনা করে দেখুন যাতে SSR এবং Node.js এর মাধ্যমে তৈরিকৃত পেইজগুলো এবং ব্রাউজার জাভাস্ক্রিপ্টের মাধ্যমে [হাইড্রেটকৃত](/docs/glossary#hydration) পেইজগুলো একই হয়।
 
 ```jsx:title=gatsby-ssr.js
 const React = require("react")
 const Layout = require("./src/components/layout")
 
-// Adds a class name to the body element
+// body element এ একটি ক্লাস সংযুক্ত করে
 exports.onRenderBody = ({ setBodyAttributes }, pluginOptions) => {
   setBodyAttributes({
     className: "my-body-class",
   })
 }
 
-// Wraps every page in a component
+// সবগুলো পেইজকে একটি কম্পোনেন্টে আবদ্ধ করে
 exports.wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
