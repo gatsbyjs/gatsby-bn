@@ -3,32 +3,32 @@ title: Node.js
 disableTableOfContents: true
 ---
 
-Learn more about Node.js, one of the software packages that makes Gatsby possible.
+Node.js সম্পর্কে আরও জানুন, এটি অন্যতম একটি সফটওয়্যার প্যাকেজ যা Gatsby কে সম্ভব করেছে। 
 
-## What is Node.js?
+## Node.js কি?
 
-Node.js is a JavaScript runtime that uses the same engine as Google Chrome. With Node.js, you can run JavaScript applications on your computer, without the need for a web browser.
+Node.js একটি জাভাস্ক্রিপ্ট রানটাইম। গুগল ক্রোম যে ইঞ্জিন ব্যবহার করে সেই একই ইঞ্জিন ব্যবহার করে Node.js । Node.js এর মাধ্যমে আপনি কোন ওয়েব ব্রাউজার ছাড়াই জাভাস্ক্রিপ্ট এপ্লিকেশন চালাতে পারবেন।
 
-In the early 2000s, services such as Gmail and Flickr showed us that JavaScript could be used to build robust applications, available to anyone with a web browser and internet connection.
+২০০০ এর শুরুর দিকে জিমেইল এবং ফ্লিকার এর মত সার্ভিস আমাদের দেখিয়েছিল জাভাস্ক্রিপ্ট শক্তিশালী এবং ত্রুটিমুক্ত এপ্লিকেশন তৈরির কাজের ব্যবহার হতে পারে যেগুলো ওয়েব ব্রাউজার এবং ইন্টারনেট কানেকশন আছে এমন যে কারো জন্য সহজলভ্য।
 
-However, those JavaScript applications had a big limitation: they could only perform as well as the runtime allowed. Before 2009, the runtime was almost always a web browser. So Google formed the Chromium Project, in part, to create a faster browser. The result was Google Chrome, released in 2008, and its new JavaScript engine: [V8](https://v8.dev/).
+যাই হোক, সেই জাভাস্ক্রিপ্ট এপ্লিকেশনগুলোর একটি বড় সীমাবদ্ধতা ছিল: সেগুলো ততটুকুই সম্পাদন করতে পারত যতটুকু রানটাইম তাদের অনুমোদন করত। ২০০৯ সালের আগে, রানটাইম প্রায় সবসময়ই ছিল একটি ওয়েব ব্রাউজার। তাই গুগল আংশিকভাবে একটি দ্রুতগতির ব্রাউজার তৈরির জন্য ক্রোমিয়াম প্রোজেক্ট গঠন করল। যার ফলাফল ছিল গুগল ক্রোম যেটা ২০০৮ সালে মুক্তি পায় এবং তাদের নতুন জাভাস্ক্রিপ্ট ইঞ্জিন: [V8](https://v8.dev/).
 
-A year later, Node.js made its debut as a standalone JavaScript runtime using the V8 engine.
+পরের বছর একটি স্বতন্ত্র জাভাস্ক্রিপ্ট রানটাইম হিসেবে Node.js এর অভিষেক ঘটে যা কিনা V8 ইঞ্জিন ব্যবহার করত।
 
-Once you've installed Node.js, you can use it to run JavaScript from the [command line](/docs/glossary#command-line). Type `node` at a prompt to launch the Node.js interactive shell. Include the path to a JavaScript file to execute that script: e.g. `node /Users/gatsbyfan/hello-world.js`.
+আপনি একবার Node.js ইন্সটল করে ফেললে [কমান্ড লাইন](/docs/glossary#command-line) থেকে জাভাস্ক্রিপ্ট সম্পাদন করতে পারবেন। আপনি একটি ইন্টারেকটিভ শেলে `node` টাইপ করুন। যে জাভাস্ক্রিপ্ট ফাইলটি আপনি সম্পাদন করতে চান তার পাথ 'node' কমান্ডের সাথে যোগ করে দিন। উদাহরণ - `node /Users/gatsbyfan/hello-world.js`।
 
-You will need to [install Node.js](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) before using Gatsby. Gatsby is built using JavaScript, and requires the Node.js runtime.
+Gatsby ব্যবহারের পূর্বে আপনাকে [Node.js ইন্সটল](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) করে নিতে হবে। Gatsby জাভাস্ক্রিপ্ট দিয়ে তৈরি এবং এর জন্য Node.js রানটাইম প্রয়োজন হয়।
 
-Installing Node.js also installs [npm](/docs/glossary#npm), the Node.js _package manager_. A package manager is specialized software that lets you install and update modules and packages used in your project.
+Node.js ইন্সটল করলে তার সাথে [npm](/docs/glossary#npm) ইন্সটল হয়,  যা Node.js এর _প্যাকেজ ম্যানেজার_। প্যাকেজ ম্যানেজার এক ধরনের বিশেষ সফটওয়ার যা আপনার প্রোজেক্টে ব্যবহৃত বিভিন্ন মডিউল ও প্যাকেজ আপডেট এবং ইন্সটল করে দেয়।
 
-You'll use npm to install Gatsby and its dependencies. Type `npm install -g gatsby-cli` at a command line prompt to install the Gatsby command line interface or CLI. The `-g` flag installs Gatsby globally, which means that you can use it by typing `gatsby` at a prompt. For example, you can use `gatsby new` to create a new Gatsby site.
+আপনি Gatsby এবং এর উপর নির্ভরশীল এমন সবকিছু ইন্সটল করার জন্য npm ব্যবহার করবেন। Gatsby কমান্ড লাইন ইন্টারফেইস অথবা CLI ইন্সটল করার জন্য কমান্ড লাইন হিসেবে টাইপ করুন `npm install -g gatsby-cli` । `-g` ফ্ল্যাগটি গ্লোবালি Gatsby ইন্সটল করে। এর মানে আপনি কমান্ড লাইনে gatsby লিখেই এটি ব্যবহার করতে পারবেন। উদাহরণস্বরূপ - `gatsby new` টাইপ করে আপনি নতুন একটি Gatsby সাইট তৈরি করতে পারবেন।
 
-## Learn more about Node.js
+## Node.js সম্পর্কে আরও জানুন
 
-- [Node.js](https://nodejs.org/en/) official web site
+- [Node.js](https://nodejs.org/en/) অফিসিয়াল ওয়েবসাইট
 
 - [Introduction to Node.js](https://nodejs.dev)
 
-- [NodeSchool](https://nodeschool.io/) offers online and in-person Node.js workshops
+- [NodeSchool](https://nodeschool.io/) অনলাইন এবং ব্যাক্তিগত Node.js ওয়ার্কশপ প্রদান করে
 
-- [V8](https://v8.dev/) developer blog web site
+- [V8](https://v8.dev/) ডেভেলপার ব্লগ ওয়েবসাইট
