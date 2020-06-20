@@ -1,47 +1,47 @@
 ---
-title: Set Up Your Development Environment
+title: আপনার ডেভেলপমেন্ট ইনভায়রনমেন্ট সেটআপ
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Before you start building your first Gatsby site, you’ll need to familiarize yourself with some core web technologies and make sure that you have installed all required software tools.
+Gatsby দিয়ে প্রথম সাইটটি বানানো শুরু করার আগে আপনার কিছু কোর ওয়েব টেকনোলজির সাথে পরিচিত হতে হবে এবং প্রয়োজনীয় সকল সফটওয়্যার টুলস গুলো ইন্সটল করেছেন কিনা তা নিশ্চিত করতে হবে।
 
-## Familiarize yourself with the command line
+## কমান্ড লাইনের সাথে পরিচিত হউন
 
-The command line is a text-based interface used to run commands on your computer. You’ll also often see it referred to as the terminal. In this tutorial, we’ll use both interchangeably. It’s a lot like using the Finder on a Mac or Explorer on Windows. Finder and Explorer are examples of graphical user interfaces (GUI). The command line is a powerful, text-based way to interact with your computer.
+কমান্ড লাইন হল টেক্সট-বেইজড একটি ইন্টারফেস যা দিয়ে কম্পিউটারে কমান্ড রান করা যায়। এটার আরেক নাম হচ্ছে টার্মিনাল। এই টিউটোরিয়ালে আমরা এই দুটো নাম ই অদলবদল করে ব্যবহার করব। এটা ম্যাক এর ফাইন্ডার অথবা উইন্ডোজ এর এক্সপ্লোরার ব্যবহারের মত নয়। ফাইন্ডার এবং এক্সপ্লোরার গ্রাফিকাল ইউজার ইন্টারফেস বা GUI এর উদাহরণ। অপরদিকে কমান্ড লাইন হল টেক্সট এর মাধ্যমে কম্পিউটারের সাথে যোগাযোগ এর একটি ক্ষমতাশালী উপায়।
 
-Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+একটু সময় নিয়ে কমান্ড লাইন ইন্টারফেসটি (CLI) খুঁজে নিন এবং চালু করুন। কোন অপারেটিং সিস্টেম ব্যবহার করছেন তার উপর নির্ভর করে দেখুন [**Mac এর জন্য নির্দেশাবলী**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**Windows এর জন্য নির্দেশাবলী**](https://www.lifewire.com/how-to-open-command-prompt-2618089) অথবা [**Linux এর জন্য নির্দেশাবলী**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
 
-_**Note:** If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
+_**বিঃদ্রঃ:** আপনি যদি কমান্ড লাইন ব্যবহারে নতুন হয়ে থাকেন, কমান্ড রান করানোর অর্থ হচ্ছে কমান্ড প্রম্পট এ কিছু প্রদত্ত  ইন্সট্রাকশন  লিখে তা  "এন্টার" দেয়া। কমান্ড গুলো হাইলাইটেড বক্সে দেখানো হবে, যেমন `node --version`, কিন্তু সকল হাইলাইটেড বক্স ই কমান্ড নয় ! কোন কিছু যদি কমান্ড হয়ে থাকে তাহলে সেটা আপনাকে চালানো অথবা এক্সিকিউট করার কথা বলা হবে।_
 
-## Install Node.js for your appropriate operating system
+## আপনার অপারেটিং সিস্টেম এ Node.js ইন্সটল করুন
 
-Node.js is an environment that can run JavaScript code outside of a web browser. Gatsby is built with Node.js. To get up and running with Gatsby, you’ll need to have a recent version installed on your computer. npm comes bundled with Node.js so if you don't have npm, chances are that you don't have Node.js either.
+Node.js হছে একটি  এনভায়রনমেন্ট যা জাভাস্ক্রিপ্ট কোড ওয়েব ব্রাউজার এর বাইরে চালাতে পারে। Gatsby Node.js দিয়ে তৈরি করা। Gatsby দিয়ে কোন কিছু করার আগে আপনাকে Node.js এর একটি সাম্প্রতিক ভার্সন ইন্সটল করতে হবে। npm Node.js এর সাথেই আসে, সুতরাং আপনার যদি npm না থাকে তাহলে সম্ভবত আপনার Node.js ও ইন্সটল করা নেই।
 
-### Mac instructions
+### Mac এর জন্য নির্দেশাবলী
 
-To install Gatsby and Node.js on a Mac, it is recommended to use [Homebrew](https://brew.sh/). A little set-up in the beginning can save you from some headaches later on!
+Mac এ Gatsby এবং Node.js ইন্সটল করার জন্য [Homebrew](https://brew.sh/) ব্যবহার করা সুবিধাজনক। এটার ব্যবহার আপনাকে পরের অনেক ঝামেলা থেকে মুক্তি দেবে!
 
-#### How to install or verify Homebrew on your computer:
+#### যেভাবে আপনার কম্পিউটারে Homebew ইন্সটল এবং ভেরিফাই করবেনঃ
 
-1. Open your Terminal.
-2. See if Homebrew is installed. You should see "Homebrew" and a version number.
+1. আপনার টার্মিনালটি চালু করুন।
+2. নিচের কমান্ড টি টার্মিনালে এন্টার করে দেখুন Homebrew ইন্সটল করা আছে কিনা। ইন্সটল করা থাকলে আপনি "Homebrew" এবং একটি ভার্সন নাম্বার দেখতে পাবেন। 
 
-```shell
-brew -v
-```
+    ```shell
+    brew -v
+    ```
 
-3. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation).
-4. Once you've installed Homebrew, repeat step 2 to verify.
+3. যদি এমন না দেখতে পান, তাহলে [Homebrew ইন্সটল করার নির্দেশাবলী](https://docs.brew.sh/Installation) অনুসরণ করে তা ডাউনলোড এবং ইন্সটল করুন।
+4. Homebrew ইন্সটল করার পর তা আসলেই হয়েছে কিনা যাচাই করতে দুই নাম্বার ধাপের পুনরাবৃত্তি করুন।
 
-#### Install Xcode Command Line Tools:
+#### Xcode কমান্ড লাইন টুলস ইন্সটল করুনঃ
 
-1. Open your Terminal.
-2. Install Xcode Command line tools by running:
+1. আপনার টার্মিনালটি চালু করুন।
+2. নিচের কমান্ড টি চালানোর মাধ্যমে Xcode কমান্ড লাইন টুলস ইন্সটল করুন:
 
-```shell
-xcode-select --install
-```
+    ```shell
+    xcode-select --install
+    ```
 
 > 💡 If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account.
 
