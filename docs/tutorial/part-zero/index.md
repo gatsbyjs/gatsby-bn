@@ -25,11 +25,11 @@ Mac এ Gatsby এবং Node.js ইন্সটল করার জন্য [H
 #### যেভাবে আপনার কম্পিউটারে Homebew ইন্সটল এবং ভেরিফাই করবেনঃ
 
 1. আপনার টার্মিনালটি চালু করুন।
-2. নিচের কমান্ড টি টার্মিনালে এন্টার করে দেখুন Homebrew ইন্সটল করা আছে কিনা। ইন্সটল করা থাকলে আপনি "Homebrew" এবং একটি ভার্সন নাম্বার দেখতে পাবেন। 
+2. নিচের কমান্ড টি টার্মিনালে এন্টার করে দেখুন Homebrew ইন্সটল করা আছে কিনা। ইন্সটল করা থাকলে আপনি "Homebrew" এবং একটি ভার্সন নাম্বার দেখতে পাবেন।
 
-    ```shell
-    brew -v
-    ```
+```shell
+brew -v
+```
 
 3. যদি এমন না দেখতে পান, তাহলে [Homebrew ইন্সটল করার নির্দেশাবলী](https://docs.brew.sh/Installation) অনুসরণ করে তা ডাউনলোড এবং ইন্সটল করুন।
 4. Homebrew ইন্সটল করার পর তা আসলেই হয়েছে কিনা যাচাই করতে দুই নাম্বার ধাপের পুনরাবৃত্তি করুন।
@@ -39,139 +39,139 @@ Mac এ Gatsby এবং Node.js ইন্সটল করার জন্য [H
 1. আপনার টার্মিনালটি চালু করুন।
 2. নিচের কমান্ড টি চালানোর মাধ্যমে Xcode কমান্ড লাইন টুলস ইন্সটল করুন:
 
-    ```shell
-    xcode-select --install
-    ```
+```shell
+xcode-select --install
+```
 
-> 💡 If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account.
+> 💡 এটায় যদি কাজ না হয় তাহলে Apple এর সাইট এ ডেভেলপার একাউন্ট এ সাইন-ইন করে [সরাসরি ডাউনলোড করুন](https://developer.apple.com/download/more/)।
 
-3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
+3. ইন্সটল শুরু করার জন্য অনুরোধ জানানোর পর যে টুলস গুলো ডাউনলোড করছেন সেগুলোর একটি সফটওয়্যার লাইসেন্স স্বীকার করার জন্য আপনাকে আবার অনুরোধ করা হবে।
 
-#### Install Node
+#### Node ইন্সটল করুন
 
-1. Open your Terminal
-2. Install node with Homebrew:
+1. আপনার টার্মিনালটি চালু করুন।
+2. Homebrew এর মাধ্যমে node ইন্সটল করুনঃ
 
 ```shell
 brew install node
 ```
 
-> 💡 If you don't want to install it through Homebrew, download the latest Node.js version from [the official Node.js website](https://nodejs.org/en/), double click on the downloaded file and go through the installation process.
+> 💡 আপনি যদি Node.js Homebrew এর মাধ্যমে ইন্সটল করতে না চান, তাহলে তা [অফিশিয়াল ওয়েবসাইট](https://nodejs.org/en/) থেকে ডাউনলোড করুন। এরপর ডাউনলোড করা ফাইলটিতে ডাবল ক্লিক করে ইন্সটল করার প্রক্রিয়াটি চালু করে তা সম্পন্ন করুন।
 
-### Windows Instructions
+### Windows এর জন্য নির্দেশাবলী
 
-- Download and install the latest Node.js version from [the official Node.js website](https://nodejs.org/en/)
+- [Node.js এর অফিশিয়াল ওয়েবসাইট](https://nodejs.org/en/) থেকে ডাউনলোড করে ইন্সটল করুন।
 
-### Linux Instructions
+### Linux এর জন্য নির্দেশাবলী
 
-Install nvm (Node Version Manager) and needed dependencies. nvm is used to manage Node.js and all its associated versions.
+nvm (Node ভার্সন ম্যানেজার) এবং এর জন্য প্রয়োজনীয় ডিপেন্ডেন্সিগুলো ইন্সটল করুন। Node.js এবং এর সাথে সংশ্লিষ্ট ভার্সনগুলো ম্যানেজ করার জন্য nvm ব্যবহার করা হয়। 
 
-> 💡 When installing a package, if it asks for confirmation, type `y` and press enter.
+> 💡 কোন প্যাকেজ ইন্সটল করার সময় যদি তা অনুমোদন চায় তাহলে ` y` লিখে এন্টার দিন।
 
-Select your distro:
+আপনার distro সিলেক্ট করুনঃ  
 
-- [Ubuntu, Debian, and other apt based distros](#ubuntu-debian-and-other-apt-based-distros)
-- [Arch, Manjaro and other pacman based distros](#arch-manjaro-and-other-pacman-based-distros)
-- [Fedora, RedHat, and other dnf based distros](#fedora-redhat-and-other-dnf-based-distros)
+- [Ubuntu, Debian, এবং অন্যান্য apt ভিত্তিক distro সমুহ](#ubuntu-debian-এবং-অন্যান্য-apt-ভিত্তিক-distros)
+- [Arch, Manjaro, এবং অন্যান্য pacman ভিত্তিক distros](#arch-manjaro-এবং-অন্যান্য-pacman-ভিত্তিক-distros)
+- [Fedora, RedHat, এবং অন্যান্য dnf ভিত্তিক distros](#fedora-redhat-এবং-অন্যান্য-dnf-ভিত্তিক-distros)
 
-> 💡 If the Linux distribution you are using is not listed here, please find instructions on the web.
+> 💡 আপনার ব্যবহার করা Linux distribution যদি এখানে না খুঁজে পান, তাহলে web এ নির্দেশাবলী খুঁজে নিন। 
 
-#### Ubuntu, Debian, and other `apt` based distros:
+#### Ubuntu, Debian, এবং অন্যান্য `apt` ভিত্তিক distro সমুহ:
 
-1. Make sure your Linux distribution is ready to go run an update and an upgrade:
+1. আপনার Linux distribution যে তৈরি আছে তা নিশ্চিত করতে update এবং upgrade করুনঃ
 
 ```shell
 sudo apt update
 sudo apt -y upgrade
 ```
 
-2. Install curl which allows you to transfer data and download additional dependencies:
+2. curl ইন্সটল করুন যা আপনাকে ডাটা আদানপ্রদান এবং অন্যান্য ডিপেন্ডেন্সিগুলো ডাউনলোড করার সক্ষমতা দেবেঃ
 
 ```shell
 sudo apt-get install curl
 ```
 
-3. After it finishes installing, download the latest nvm version:
+3. curl ইন্সটল শেষ হবার পর nvm এর সর্বশেষ ভার্সনটি ডাউনলোড করুন:
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-4. Confirm this has worked. The output should be a version number.
+4. নিশ্চিত করুন nvm কাজ করছে। সফল হলে নিচের কমান্ডটি চালিয়ে একটি ভার্সন নাম্বার দেখতে পাবেন। 
 
 ```shell
 nvm --version
 ```
 
-5. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+5. পরবর্তী সেকশনে চলে যানঃ [Set default Node.js version](#set-default-nodejs-version)
 
-#### Arch, Manjaro and other `pacman` based distros:
+#### Arch, Manjaro, এবং অন্যান্য `pacman` ভিত্তিক distros:
 
-1. Make sure your distribution is ready to go:
+1. নিশ্চিত করুন আপনার distribution তৈরি আছেঃ 
 
 ```shell
 sudo pacman -Sy
 ```
 
-2. These distros come installed with curl, so you can use that to download nvm:
+2. এই distro গুলোতে curl ইন্সটল করা থাকে, যা দিয়ে আপনি nvm ডাউনলোড করে নিতে পারবেনঃ
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-3. Before using nvm, you need to install additional dependencies by running:
+3. nvm ব্যবহার করার আগে আরো কিছু প্রয়োজনীয় ডিপেন্ডেন্সি ইন্সটল করুন নিচের কমান্ডটি চালানোর মাধ্যমেঃ 
 
 ```shell
 sudo pacman -S grep awk tar
 ```
 
-4. Confirm this has worked. The output should be a version number.
+4. নিশ্চিত করুন এটা কাজ করেছে। সফল হলে নিচের কমান্ডটি চালিয়ে একটি ভার্সন নাম্বার দেখতে পাবেন। 
 
 ```shell
 nvm --version
 ```
 
-5. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+5. পরবর্তী সেকশনে চলে যানঃ [Set default Node.js version](#set-default-nodejs-version)
 
-#### Fedora, RedHat, and other `dnf` based distros:
+#### Fedora, RedHat, এবং অন্যান্য `dnf` ভিত্তিক distros:
 
-1. These distros come installed with curl, so you can use that to download nvm:
+1. এই distro গুলোতে curl ইন্সটল করা থাকে, যা দিয়ে আপনি nvm ডাউনলোড করে নিতে পারবেনঃ
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-2. Confirm this has worked. The output should be a version number.
+2. নিশ্চিত করুন এটা কাজ করেছে। সফল হলে নিচের কমান্ডটি চালিয়ে একটি ভার্সন নাম্বার দেখতে পাবেন।
 
 ```shell
 nvm --version
 ```
 
-3. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+3. পরবর্তী সেকশনে চলে যানঃ [Set default Node.js version](#set-default-nodejs-version)
 
-#### Set default Node.js version
+#### ডিফল্ট Node.js ভার্সন স্থির করুন
 
-When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the version 10 release, but more recent version numbers can be used instead.
+nvm যখন ইন্সটল হয়, তখন এটা কোন নির্দিষ্ট node ভার্সন এ স্থির হয় না। আপনাকে যে ভার্সনটি ব্যবহার করতে চান তা ইন্সটল করতে হবে এবং nvm কে তা ব্যবহার করার জন্য বলতে হবে। এই উদাহরণ version 10 release ব্যবহার করে, কিন্তু চাইলে এর বদলে আরো নতুন ভার্সন ও ব্যবহার করা সম্ভব। 
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-Confirm that this worked:
+নিশ্চিত করুন এটা কাজ করেছেঃ  
 
 ```shell
 npm --version
 node --version
 ```
 
-The output should look similar to the screenshot below, showing version numbers in response to the commands.
+The output should look similar to the screenshot below, showing version numbers in response to the commands. ফলাফল নিচের স্ক্রিনশট এর কাছাকাছি কিছু হওয়া উচিত, যেখানে কমান্ডের ফলাফল হিসাবে ভার্সন নাম্বার দেখাবে।  
 
 ![Check node and npm versions in terminal](01-node-npm-versions.png)
 
-Once you have followed the installation steps and you have checked everything is installed properly, you can continue to the next step.
+সব নির্দেশাবলী অনুসরণ করে যদি প্রয়োজনীয় সকল কিছু ইন্সটল করে থাকেন এবং নিশ্চিত হয়ে থাকেন যে সব ঠিকভাবে কাজ করছে, তাহলে পরের ধাপে চলে যান। 
 
-## Install Git
+## Git ইন্সটল করুন
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. When you install a Gatsby "starter" site, Gatsby uses Git behind the scenes to download and install the required files for your starter. You will need to have Git installed to set up your first Gatsby site.
 
