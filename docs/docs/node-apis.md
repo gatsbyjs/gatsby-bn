@@ -26,8 +26,8 @@ exports.createPages = (_, pluginOptions, cb) => {
 }
 ```
 
-If your plugin does not do async work, you can just return directly.
+যদি আপনার প্লাগইন অ্যাসিঙ্ক কাজ না করে তবে আপনি সরাসরি সরাসরি ফিরে আসতে পারেন।
 
-## Usage
+## ব্যবহার
 
-Implement any of these APIs by exporting them from a file named `gatsby-node.js` in the root of your project.
+নামের একটি ফাইল থেকে এগুলি রফতানি করে এই কোনও এপিআই প্রয়োগ করুন`gatsby-node.js` আপনার প্রকল্পের মূল মধ্যে।
