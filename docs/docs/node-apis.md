@@ -5,7 +5,7 @@ jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-Gatsby GraphQL ডেটা স্তরে আপনার সাইটের ডেটা নিয়ন্ত্রণের জন্য প্লাগইন এবং সাইট নির্মাতাকে অনেকগুলি APIs দেয় ।
+Gatsby GraphQL ডেটা স্তরে আপনার সাইটের ডেটা নিয়ন্ত্রণের জন্য প্লাগইন এবং সাইট নির্মাতাকে অনেকগুলি API দেয়।
 
 ## Async plugins
 
