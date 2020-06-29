@@ -5,11 +5,11 @@ jsdoc: ["gatsby/src/utils/api-node-docs.js"]
 apiCalls: NodeAPI
 ---
 
-Gatsby GraphQL ডেটা স্তরে আপনার সাইটের ডেটা নিয়ন্ত্রণের জন্য প্লাগইন এবং সাইট বিল্ডারেরে অনেকগুলি API দেয়।
+Gatsby GraphQL ডেটা স্তরে আপনার সাইটের ডেটা নিয়ন্ত্রণের জন্য প্লাগইন এবং সাইট বিল্ডারের অনেকগুলি API দেয়।
 
 ## Async plugins
 
-যদি আপনার প্লাগইন async অপারেশন সম্পাদন করে (disk I/O, database access, calling remote APIs, etc.) আপনাকে হয় কোনও promise ফিরিয়ে দিতে হবে বা তৃতীয় আর্গুমেন্টের সাথে প্রেরিত কলব্যাকটি ব্যবহার করতে হবে। Gatsby এর সঠিকভাবে কাজ করা জন্য তার পূর্ববর্তী API গুলি প্রথমে সম্পূর্ণ হয়েছে কিনা জানা দরকার, এ প্রেক্ষিতে প্লাগইন শেষ হয়েছে কিনা, তা কিছু API দ্বারা Gatsby এর জানা দরকার। আরও জানতে [Debugging Async Lifecycles](/docs/debugging-async-lifecycles/) দেখুন।
+যদি আপনার প্লাগইন async অপারেশন সম্পাদন করে (disk I/O, database access, calling remote APIs, etc.) আপনাকে হয় কোনও promise ফিরিয়ে দিতে হবে বা তৃতীয় আর্গুমেন্টের সাথে প্রেরিত কলব্যাকটি ব্যবহার করতে হবে। Gatsby এর সঠিকভাবে কাজ করার জন্য তার পূর্ববর্তী API গুলি প্রথমে সম্পূর্ণ হয়েছে কিনা জানা দরকার, এ প্রেক্ষিতে প্লাগইন শেষ হয়েছে কিনা, তা কিছু API দ্বারা Gatsby এর জানা দরকার। আরও জানতে [Debugging Async Lifecycles](/docs/debugging-async-lifecycles/) দেখুন।
 
 ```javascript
 // Promise API
