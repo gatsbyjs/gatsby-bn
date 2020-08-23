@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+title: Gatsby তে স্টাইলিংয়ের পরিচিতি
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,11 +14,11 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+Gatsby টিউটোরিয়ালের দ্বিতীয় পার্টে স্বাগতম!
 
-## What's in this tutorial?
+## এই টিউটোরিয়ালে কি আছে?
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+এই পার্টে আপনি Gatsby ওয়েবসাইট স্টাইলিংয়ের বিভিন্ন বিষয়গুলি অনুসন্ধান করবেন এবং ওয়েবসাইট তৈরিতে React কম্পোনেন্ট ব্যবহারের গভীর ধারণা পাবেন।
 
 ## Using global styles
 
