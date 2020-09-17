@@ -2,9 +2,9 @@
 title: The gatsby-node.js API file
 ---
 
-Code in the file `gatsby-node.js` is run once in the process of building your site. You can use it to create pages dynamically, add nodes in GraphQL, or respond to events during the build lifecycle. To use the [Gatsby Node APIs](/docs/node-apis/), create a file named `gatsby-node.js` in the root of your site. Export any of the APIs you wish to use in this file.
+`gatsby-node.js` ফাইলের কোড একবার রান করা হয় আপনার সাইট তৈরি করার জন্য। আপনি এটি ব্যবহার করে dynamically পেইজ তৈরি করতে পারেন অথবা GraphQL এ node যুক্ত করতে পারেন অথবা build lifecycle events এ সাড়া দিতে পারেন। [Gatsby Node APIs](/docs/node-apis/) ব্যবহার করতে চাইলে `gatsby-node.js` নামে একটি ফাইল আপনার সাইটের মূল ফোল্ডারে তৈরি করুন। আপনি যেসব API ব্যবহার করতে চান এই ফাইলে, তা export করুন।
 
-Every Gatsby Node API passes a [set of Node API helpers](/docs/node-api-helpers/). These let you access several methods like reporting, or perform actions like creating new pages.
+প্রতিটি Gatsby Node API [এক সেট সাহায্যকারী Node API](/docs/node-api-helpers/) সরবরাহ করে। এগুলো আপনাকে বিভিন্ন method ব্যবহার করতে দেয় যেমনঃ রিপোর্টিং অথবা নতুন কোনো পেইজ তৈরি করা।
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
