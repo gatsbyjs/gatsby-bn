@@ -43,113 +43,113 @@ Mac এ Gatsby এবং Node.js ইন্সটল করার জন্য [H
     xcode-select --install
     ```
 
-> 💡 If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account.
+> 💡 এটা যদি কাজ না করে তাহলে Apple এর সাইটে ডেভেলপার একাউন্টে সাইন ইন করে [সরাসরি ডাউনলোড করুন](https://developer.apple.com/download/more/)।
 
-3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
+3. ইন্সটল শুরু করার পর আপনাকে সফটওয়্যার লাইসেন্স স্বীকার করতে হবে টুল গুলো ডাউনলোড এর জন্য। 
 
-#### Install Node
+#### Node ইন্সটল করুনঃ
 
-1. Open your Terminal
-2. Install node with Homebrew:
+1. আপনার টার্মিনালটি চালু করুন।
+2. Homebrew এর মাধ্যমে node ইন্সটল করুনঃ
 
 ```shell
 brew install node
 ```
 
-> 💡 If you don't want to install it through Homebrew, download the latest Node.js version from [the official Node.js website](https://nodejs.org/en/), double click on the downloaded file and go through the installation process.
+> 💡 আপনি যদি Homebrew এর মাধ্যমে ইন্সটল করতে না চান তাহলে [Node.js এর অফিশিয়াল ওয়েবসাইট](https://nodejs.org/en/) থেকে ডাউনলোড করুন। ডাউনলোড করা ফাইলে ডাবল ক্লিক করলে ইন্সটল করার প্রণালী শুরু হবে।
 
-### Windows Instructions
+### Windows এর জন্য নির্দেশাবলী
 
-- Download and install the latest Node.js version from [the official Node.js website](https://nodejs.org/en/)
+-  সর্বাধুনিক ভার্সন টি [Node.js এর অফিশিয়াল ওয়েবসাইট](https://nodejs.org/en/) থেকে ডাউনলোড এবং ইন্সটল করুন।
 
-### Linux Instructions
+### Linux এর জন্য নির্দেশাবলী
 
-Install nvm (Node Version Manager) and needed dependencies. nvm is used to manage Node.js and all its associated versions.
+nvm (Node Version Manager) এবং এর জন্য প্রয়োজনীয় ডিপেন্ডেন্সি গুলো ইন্সটল করুন। nvm এর মাধ্যমে Node.js এবং এর অনুষঙ্গী ভার্সন সমূহ তত্ত্বাবধায়ন করা হয়।
 
-> 💡 When installing a package, if it asks for confirmation, type `y` and press enter.
+> 💡 প্যাকেজ ইন্সটলের সময় অনুমোদন চাইলে y টাইপ করে এন্টার  চাপুন।
 
-Select your distro:
+আপনার distro নির্বাচন করুনঃ
 
-- [Ubuntu, Debian, and other apt based distros](#ubuntu-debian-and-other-apt-based-distros)
-- [Arch, Manjaro and other pacman based distros](#arch-manjaro-and-other-pacman-based-distros)
-- [Fedora, RedHat, and other dnf based distros](#fedora-redhat-and-other-dnf-based-distros)
+- [Ubuntu, Debian এবং অন্যান্য apt ভিত্তিক distro সমূহ](#ubuntu-debian-এবং-অন্যান্য-apt-ভিত্তিক-distro-সমূহঃ)
+- [Arch, Manjaro এবং অন্যান্য pacman ভিত্তিক distro সমূহ](#arch-manjaro-এবং-অন্যান্য-pacman-ভিত্তিক-distro-সমূহঃ)
+- [Fedora, RedHat এবং অন্যান্য dnf ভিত্তিক distro সমূহ](#fedora-redhat-এবং-অন্যান্য-dnf-ভিত্তিক-distro-সমূহঃ)
 
-> 💡 If the Linux distribution you are using is not listed here, please find instructions on the web.
+> 💡 আপনি যে Linux distro টি ব্যবহার করছেন তা এখানে না পেলে ওয়েব এ প্রয়োজনীয় নির্দেশাবলী খুঁজে নিন।
 
-#### Ubuntu, Debian, and other `apt` based distros:
+#### Ubuntu, Debian এবং অন্যান্য `apt` ভিত্তিক distro সমূহঃ
 
-1. Make sure your Linux distribution is ready to go run an update and an upgrade:
+1. আপনার Linux distro টি তৈরি কিনা তা নিশ্চিত করতে একবার update এবং upgrade চালানঃ
 
 ```shell
 sudo apt update
 sudo apt -y upgrade
 ```
 
-2. Install curl which allows you to transfer data and download additional dependencies:
+2. curl ইন্সটল করুন, যার মাধ্যমে আপনি অন্যান্য ডিপেন্ডেন্সি গুলো ডাউনলোড করতে পারবেনঃ
 
 ```shell
 sudo apt-get install curl
 ```
 
-3. After it finishes installing, download the latest nvm version:
+3. curl ইন্সটল শেষ হলে তার মাধ্যমে সর্বাধুনিক nvm ভার্সনটি ডাউনলোড করুনঃ
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-4. Confirm this has worked. The output should be a version number.
+4. এটা যে কাজ করেছে তা নিশ্চিত করতে নিচের কমান্ডটি চালান। আউটপুট হিসাবে একটি ভার্সন নাম্বার দেখতে পাওয়া উচিত।
 
 ```shell
 nvm --version
 ```
 
-5. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
 
-#### Arch, Manjaro and other `pacman` based distros:
+#### Arch, Manjaro এবং অন্যান্য `pacman` ভিত্তিক distro সমূহঃ
 
-1. Make sure your distribution is ready to go:
+1. আপনার Linux distro টি তৈরি কিনা তা নিশ্চিত করুনঃ
 
 ```shell
 sudo pacman -Sy
 ```
 
-2. These distros come installed with curl, so you can use that to download nvm:
+2. এই distro গুলোতে curl আগে থেকেই ইন্সটল করা থাকে। এটা দিয়ে nvm ডাউনলোড করে নিনঃ
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-3. Before using nvm, you need to install additional dependencies by running:
+3. nvm ব্যবহার এর আগে আরো কিছু প্রয়োজনীয় ডিপেন্ডেন্সি নিচের কমান্ডটি চালিয়ে ইন্সটল করে নিনঃ
 
 ```shell
 sudo pacman -S grep awk tar
 ```
 
-4. Confirm this has worked. The output should be a version number.
+4. এটা যে কাজ করেছে তা নিশ্চিত করতে নিচের কমান্ডটি চালান। আউটপুট হিসাবে একটি ভার্সন নাম্বার দেখতে পাওয়া উচিত।
 
 ```shell
 nvm --version
 ```
 
-5. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
 
-#### Fedora, RedHat, and other `dnf` based distros:
+#### Fedora, RedHat এবং অন্যান্য `dnf` ভিত্তিক distro সমূহঃ
 
-1. These distros come installed with curl, so you can use that to download nvm:
+1. এই distro গুলোতে curl আগে থেকেই ইন্সটল করা থাকে। এটা দিয়ে nvm ডাউনলোড করে নিনঃ
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-2. Confirm this has worked. The output should be a version number.
+2. এটা যে কাজ করেছে তা নিশ্চিত করতে নিচের কমান্ডটি চালান। আউটপুট হিসাবে একটি ভার্সন নাম্বার দেখতে পাওয়া উচিত।
 
 ```shell
 nvm --version
 ```
 
-3. Continue with the section: [Set default Node.js version](#set-default-nodejs-version)
+3. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
 
-#### Set default Node.js version
+#### ডিফল্ট Node.js ভার্সন ঠিক করুন
 
 When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the version 10 release, but more recent version numbers can be used instead.
 
