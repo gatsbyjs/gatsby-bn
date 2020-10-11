@@ -103,7 +103,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 nvm --version
 ```
 
-5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
+5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন স্থির করুন](#ডিফল্ট-nodejs-ভার্সন-স্থির-করুন) সেকশনে চলে যান।
 
 #### Arch, Manjaro এবং অন্যান্য `pacman` ভিত্তিক distro সমূহঃ
 
@@ -131,7 +131,7 @@ sudo pacman -S grep awk tar
 nvm --version
 ```
 
-5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
+5. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন স্থির করুন](#ডিফল্ট-nodejs-ভার্সন-স্থির-করুন) সেকশনে চলে যান।
 
 #### Fedora, RedHat এবং অন্যান্য `dnf` ভিত্তিক distro সমূহঃ
 
@@ -147,82 +147,82 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 nvm --version
 ```
 
-3. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন ঠিক করুন](#ডিফল্ট-nodejs-ভার্সন-ঠিক-করুন) সেকশনে চলে যান।
+3. পরবর্তী নির্দেশাবলীর জন্য [ডিফল্ট Node.js ভার্সন স্থির করুন](#ডিফল্ট-nodejs-ভার্সন-স্থির-করুন) সেকশনে চলে যান।
 
-#### ডিফল্ট Node.js ভার্সন ঠিক করুন
+#### ডিফল্ট Node.js ভার্সন স্থির করুন
 
-When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the version 10 release, but more recent version numbers can be used instead.
+যখন nvm ইন্সটল হয় তখন তা কোন নির্দিষ্ট ভার্সন এ নিজে থেকে স্থির হয় না। যে ভার্সনটি আপনি ব্যবহার করতে চাচ্ছেন তা আপনাকে নির্দিষ্ট করে দিতে হবে। এই উদাহরণ ভার্সন ১০ ব্যবহার করে কিন্তু আরো নতুন ভার্সন ব্যবহার করাও সম্ভব।
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-Confirm that this worked:
+নিশ্চিত করুন এটা কাজ করেছেঃ
 
 ```shell
 npm --version
 node --version
 ```
 
-The output should look similar to the screenshot below, showing version numbers in response to the commands.
+আপনার টার্মিনালে নিচের স্ক্রিনশটের মত ফলাফল আসা উচিত, যা কমান্ড এর উত্তরে ভার্সন নাম্বার দেখাবে।
 
-![Check node and npm versions in terminal](01-node-npm-versions.png)
+![টার্মিনালে node এবং npm ভার্সন পরখ করুন](01-node-npm-versions.png)
 
-Once you have followed the installation steps and you have checked everything is installed properly, you can continue to the next step.
+আপনি যদি ইন্সটল করার সকল নির্দেশাবলী গুলো মেনে চলেন এবং পরীক্ষা করে দেখেন যে সব কিছু ঠিক ভাবে ইন্সটল হয়েছে তাহলে পরবর্তী ধাপে চলে যান। 
 
-## Install Git
+## Git ইন্সটল করুন
 
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. When you install a Gatsby "starter" site, Gatsby uses Git behind the scenes to download and install the required files for your starter. You will need to have Git installed to set up your first Gatsby site.
+Git একটি ফ্রি এবং ওপেন সোর্স ডিস্ট্রিবিউটেড ভার্সন কন্ট্রোল সিস্টেম যা ছোট থেকে অনেক বড় প্রজেক্ট দ্রুততা এবং সক্ষমতার মাধ্যমে পরিচালনা করতে পারে। যখন আপনি একটি Gatsby "starter" সাইট ইন্সটল করুন, Gatsby তা Git এর মাধ্যমেই ডাউনলোড করে এবং প্রয়োজনীয় ফাইল গুলো ইন্সটল করে। তাই আপনার প্রথম Gatsby সাইট সেট আপ করার জন্য Git ইন্সটল থাকা প্রয়োজন।
 
-The steps to download and install Git depend on your operating system. Follow the guide for your system:
+Git ইন্সটল করার জন্য প্রয়োজনীয় নির্দেশাবলী আপনার অপারেটিং সিস্টেম এর উপর নির্ভর করে। আপনার সিস্টেমের জন্য উপযোগী নির্দেশাবলী দেখে ইন্সটল করুন।
 
-- [Install Git on macOS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
-- [Install Git on Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
-- [Install Git on Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
+- [macOS এ Git ইন্সটল করুন](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
+- [Windows এ Git ইন্সটল করুন](https://www.atlassian.com/git/tutorials/install-git#windows)
+- [Linux এ Git ইন্সটল করুন](https://www.atlassian.com/git/tutorials/install-git#linux)
 
-## Using the Gatsby CLI
+## Gatsby CLI এর ব্যবহার
 
-The Gatsby CLI tool lets you quickly create new Gatsby-powered sites and run commands for developing Gatsby sites. It is a published npm package.
+Gatsby CLI টুল আপনাকে দ্রুততার সাথে Gatsby চালিত সাইট বানাতে সাহায্য করে এবং কমান্ডের মাধ্যমে সাইট ডেভেলপ করতে সক্ষম করে. এটি একটি পাব্লিশড npm প্যাকেজ।
 
-The Gatsby CLI is available via npm and should be installed globally by running:
+Gatsby CLI npm এর মাধ্যমে সহজলভ্য এবং নিচের কমান্ডের মাধ্যমে এটি গ্লোবালি ইন্সটল করা উচিতঃ
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-_**Note**: when you install Gatsby and run it for the first time, you'll see a short message notifying you about anonymous usage data that is being collected for Gatsby commands, you can read more about how that data is pulled out and used in the [telemetry doc](/docs/telemetry)._
+_**বিঃ দ্রঃ** আপনি যখন প্রথম বারের মত Gatsby ইন্সটল করবেন এবং চালাবেন, তখন একটি সংক্ষিপ্ত  মেসেজ আপনাকে বেনামী  ভাবে ইউসেজ ডাটা সংগ্রহের বিষয়ে অনুগত করবে। কিভাবে এই ডাটা সংগ্রহ এবং ব্যবহার করা হবে তা জানতে [telemetry doc](/docs/telemetry) দেখুন।_
 
-See the available commands:
+কমান্ডের তালিকা দেখুনঃ
 
 ```shell
 gatsby --help
 ```
 
-![Check gatsby commands in terminal](05-gatsby-help.png)
+![gatsby কমান্ড টার্মিনালে চালিয়ে দেখুন](05-gatsby-help.png)
 
-> 💡 If you are unable to successfully run the Gatsby CLI due to a permissions issue, you may want to check out the [npm docs on fixing permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions), or [this guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
+> 💡 আপনি যদি পারমিশন সংক্রান্ত কারণে Gatsby CLI চালাতে অসক্ষম হন তাহলে [পারমিশন ঠিক করার জন্য npm এর ডক](https://docs.npmjs.com/getting-started/fixing-npm-permissions) বা [এই গাইডটি](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) দেখতে পারেন।
 
-## Create a Gatsby site
+## একটি Gatsby সাইট তৈরি করুন
 
-Now you are ready to use the Gatsby CLI tool to create your first Gatsby site. Using the tool, you can download “starters” (partially built sites with some default configuration) to help you get moving faster on creating a certain type of site. The “Hello World” starter you’ll be using here is a starter with the bare essentials needed for a Gatsby site.
+এখন আপনি Gatsby CLI ব্যবহার করে আপনার প্রথম Gatsby সাইট বানানোর জন্য প্রস্তুত। Gatsby CLI দিয়ে আপনি "starters" (ডিফল্ট কনফিগারেশন সহ আংশিকভাবে প্রস্তুত সাইট) ডাউনলোড করে কিছু নির্দিষ্ট ধরনের সাইট বানানোর কাজে বেশ কিছুটা এগিয়ে যেতে পারবেন। এখানে যে "Hello Word" নামক "starter" টি আপনি ব্যবহার করবেন তা Gatsby সাইটের জন্য সবচে অপরিহার্য অংশ নিয়ে তৈরি একটি starter।
 
-1.  Open up your terminal.
-2.  Create a new site from a starter:
+1.  টার্মিনাল চালু করুন।
+2.  starter থেকে একটি নতুন সাইট বানানঃ
 
 ```shell
 gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-> 💡 What just happened?
+> 💡 এখানে কি ঘটল?
 >
-> - `new` is a gatsby command to create a new Gatsby project.
-> - Here, `hello-world` is an arbitrary title — you could pick anything. The CLI tool will place the code for your new site in a new folder called “hello-world”.
-> - Lastly, the GitHub URL specified points to a code repository that holds the starter code you want to use.
+> - `new` হচ্ছে একটি Gatsby কমান্ড যা দিয়ে নতুন একটি Gatsby প্রজেক্ট তৈরি করা যায়।
+> - এখানে "hello-world" নামের পেছনে কোন নির্দিষ্ট কারণ নেই । আপনি নিজের ইচ্ছা মত যে কোন নাম দিতে পারবেন। CLI টুল টি আপনার নতুন সাইটের কোডগুলো "hello-world" নামের একটি নতুন ফোল্ডার এ রাখবে।
+> - কমান্ডে দেয়া GitHub URL টি starter কোড এর রেপোজিটরির ঠিকানা।
 
-> 💡 Depending on your download speed, the amount of time this takes will vary. For brevity's sake, the gif below was paused during part of the install
+> 💡 এটা শেষ হতে কতটা সময় লাগবে তা আপনার ইন্টারনেট স্পিডের উপর নির্ভর করবে। সংক্ষিপ্ততার জন্য নিচের gif টি ইন্সটলের কিছু সময় বন্ধ করা ছিল।
 
-3.  Change into the working directory:
+3.  ওয়ার্কিং ডাইরেক্টরি বদলানঃ
 
 ```shell
 cd hello-world
