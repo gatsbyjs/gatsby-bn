@@ -205,7 +205,7 @@ gatsby --help
 
 ## একটি Gatsby সাইট তৈরি করুন
 
-এখন আপনি Gatsby CLI ব্যবহার করে আপনার প্রথম Gatsby সাইট বানানোর জন্য প্রস্তুত। Gatsby CLI দিয়ে আপনি "starters" (ডিফল্ট কনফিগারেশন সহ আংশিকভাবে প্রস্তুত সাইট) ডাউনলোড করে কিছু নির্দিষ্ট ধরনের সাইট বানানোর কাজে বেশ কিছুটা এগিয়ে যেতে পারবেন। এখানে যে "Hello Word" নামক "starter" টি আপনি ব্যবহার করবেন তা Gatsby সাইটের জন্য সবচে অপরিহার্য অংশ নিয়ে তৈরি একটি starter।
+এখন আপনি Gatsby CLI ব্যবহার করে আপনার প্রথম Gatsby সাইট বানানোর জন্য প্রস্তুত। Gatsby CLI দিয়ে আপনি "starters" (ডিফল্ট কনফিগারেশন সহ আংশিকভাবে প্রস্তুত সাইট) ডাউনলোড করে কিছু নির্দিষ্ট ধরনের সাইট বানানোর কাজে বেশ কিছুটা এগিয়ে নিতে পারবেন। এখানে যে "Hello Word" নামক "starter" টি আপনি ব্যবহার করবেন তা Gatsby সাইটের জন্য সবচে দরকারি অংশ সমৃদ্ধ একটি starter।
 
 1.  টার্মিনাল চালু করুন।
 2.  starter থেকে একটি নতুন সাইট বানানঃ
@@ -228,98 +228,98 @@ gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd hello-world
 ```
 
-> 💡 This says _'I want to change directories (`cd`) to the “hello-world” subfolder'_. Whenever you want to run any commands for your site, you need to be in the context for that site (aka, your terminal needs to be pointed at the directory where your site code lives).
+> 💡 এই কমান্ডটার (`cd`) মাধ্যমে আপনি বলছেন _'আমি আমার ডিরেক্টরি  বদলে  “hello-world”  সাব-ফোল্ডার এ যেতে চাই'_। আপনার সাইটের জন্য যে কোন কমান্ড চালানোর জন্য আপনাকে অবশ্যই যে ডাইরেক্টরিতে সাইটের কোড আছে তাতে টার্মিনালের মাধ্যমে পয়েন্ট করতে হবে। 
 
-4.  Start the development mode:
+4.  ডেভেলপমেন্ট মোড চালু করুনঃ
 
 ```shell
 gatsby develop
 ```
 
-> 💡 This command starts a development server. You will be able to see and interact with your new site in a development environment — local (on your computer, not published to the internet).
+> 💡 এই কমান্ডটা একটা ডেভেলপমেন্ট সার্ভার চালু করে। এটার মাধ্যমে আপনি আপনার সাইট লোকাল ডেভেলপমেন্ট এনভায়রনমেন্টে (আপনার কম্পিউটারে, ইন্টারনেটে নয়) দেখতে পারবেন।   
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./03-create-site.mp4" />
   <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
-### View your site locally
+### লোকালি আপনার সাইট দেখুন
 
-Open up a new tab in your browser and navigate to `http://localhost:8000/`
+ব্রাউজার এ একটি নতুন ট্যাব খুলুন এবং এই `http://localhost:8000/` ঠিকানায় যান।
 
-![Check homepage](04-home-page.png)
+![হোমপেজ চেক](04-home-page.png)
 
-Congrats! This is the beginning of your very first Gatsby site! 🎉
+অভিনন্দন! এটা আপনার সর্বপ্রথম Gatsby সাইটের শুরু! 🎉
 
-You’ll be able to visit the site locally at `http://localhost:8000/` for as long as your development server is running. That’s the process you started by running the `gatsby develop` command. To stop running that process (or to “stop running the development server”), go back to your terminal window, hold down the “control” key, and then hit “c” (ctrl-c). To start it again, run `gatsby develop` again!
+আপনি আপনার সাইট `http://localhost:8000/` এ  দেখতে পারবেন যতখন পর্যন্ত আপনার ডেভেলপমেন্ট সার্ভারটি চলছে। এটা হল সেই প্রসেস যা আপনি `gatsby develop` কমান্ডের মাধ্যমে চালিয়েছিলেন।  এই প্রসেস বা ডেভেলপমেন্ট সার্ভারটি বন্ধ করতে আপনার টার্মিনালে যান এবং “control” কি ধরে রেখে  “c” (ctrl-c) চাপুন। আবার চালু করতে `gatsby develop` কমান্ডটি চালান!
 
-_**Note:** If you are using VM setup like `vagrant` and/or would like to listen on your local IP address, run `gatsby develop --host=0.0.0.0`. Now, the development server listens on both `http://localhost` and your local IP._
+_**বিঃদ্রঃ** আপনি যদি `vagrant` বা  অন্য  কোন  VM সেটআপ ব্যবহার করে থাকেন তাহলে আপনার লোকাল  IP এড্রেস এ সাইট দেখতে চাইলে`gatsby develop --host=0.0.0.0` কমান্ড চালান। এখন ডেভেলপমেন্ট সার্ভার  `http://localhost` এবং আপনার লোকাল  IP দুটোতেই লিসেন করবে।_
 
-## Set up a code editor
+## কোড এডিটর সেটআপ করুন
 
-A code editor is a program designed specifically for editing computer code. There are many great ones out there.
+কোড এডিটর হচ্ছে কোড এডিট করার জন্য বিশেষভাবে তৈরি একটি প্রোগ্রাম। বেশ ভালো কিছু কোড এডিটর আছে যা থেকে আপনি বাছাই করে নিতে পারবেন। 
 
-### Download VS Code
+### VS Code ডাউনলোড করুন
 
-Gatsby documentation sometimes includes screenshots that were taken in VS Code, so if you don't have a preferred code editor yet, using VS Code will make sure that your screen looks just like the screenshots in the tutorial and docs. If you choose to use VS Code, visit the [VS Code site](https://code.visualstudio.com/#alt-downloads) and download the version appropriate for your platform.
+Gatsby এর ডকুমেন্টেশনে অনেক সময় স্ক্রিনশট থাকে যা VS Code থেকে নেয়া। সুতরাং আপনার যদি নিজের পছন্দের কোন কোড এডিটর না থেকে থাকে, তাহলে VS Code ব্যবহার করতে পারেন। এতে আপনার স্ক্রিনে যা দেখবেন তা টিউটোরিয়ালে দেয়া স্ক্রিনশটের সাথে মিলে যাবে। আপনি যদি VS Code ব্যবহারের সিদ্ধান্ত নিয়ে থাকেন, তাহলে [VS Code সাইট](https://code.visualstudio.com/#alt-downloads) থেকে আপনার OS এর জন্য উপযোগী ভার্সন ডাউনলোড করে নিন।
 
-### Install the Prettier plugin
+### Prettier প্লাগিন ইন্সটল করুন
 
-We also recommend using [Prettier](https://github.com/prettier/prettier), a tool that helps format your code to avoid errors.
+আমরা পরামর্শ দেব যেন আপনি [Prettier](https://github.com/prettier/prettier) নামে একটি প্লাগিন ও ইন্সটল করে নিন। এটা আপনার কোড ফরম্যাট করতে এবং ভুল এরাতে সাহায্য করবে।
 
-You can use Prettier directly in your editor using the [Prettier VS Code plugin](https://github.com/prettier/prettier-vscode):
+আপনি আপনার কোড এডিটর এ Prettier সরাসরি [Prettier VS Code প্লাগিন](https://github.com/prettier/prettier-vscode) ব্যবহার করতে পারেনঃ
 
-1.  Open the extensions view on VS Code (View => Extensions).
-2.  Search for "Prettier - Code formatter".
-3.  Click "Install". (After installation, you'll be prompted to restart VS Code to enable the extension. Newer versions of VS Code will automatically enable the extension after download.)
+1.  VS Code এ এক্সটেনশনস ভিউ খুলুন (View => Extensions)।
+2.  "Prettier - Code formatter" দিয়ে সার্চ করুন।
+3.  "Install" এ ক্লিক করুন। (ইন্সটল করার পর VS Code রিস্টার্ট করতে বলা হবে যেন নতুন প্লাগিনটি ব্যবহারোপযোগী হয়। VS Code এর নতুন ভার্সন গুলো এক্সটেনশন ডাউনলোডের পর স্বয়ংক্রিয়ভাবে তা এনাবল করে দেয়।)
 
-> 💡 If you're not using VS Code, check out the Prettier docs for [install instructions](https://prettier.io/docs/en/install.html) or [other editor integrations](https://prettier.io/docs/en/editors.html).
+> 💡 আপনি যদি VS Code না ব্যবহার করে থাকেন তাহলে Prettier প্লাগিন [ইন্সটল করার নির্দেশাবলী](https://prettier.io/docs/en/install.html) বা [অন্যান্য এডিটরের সাথে কিভাবে ব্যাবহার করবেন](https://prettier.io/docs/en/editors.html) তা দেখুন।
 
-## ➡️ What’s Next?
+## ➡️ এরপর কি?
 
-To summarize, in this section you:
+সংক্ষেপে আপনি এই সেকশনে আপনিঃ
 
-- Learned about the command line and how to use it
-- Installed and learned about Node.js and the npm CLI tool, the version control system Git, and the Gatsby CLI tool
-- Generated a new Gatsby site using the Gatsby CLI tool
-- Ran the Gatsby development server and visited your site locally
-- Downloaded a code editor
-- Installed a code formatter called Prettier
+- শিখেছেন কমান্ড লাইন কি এবং তা কিভাবে ব্যবহার করতে হয়
+- Node.js, npm CLI, Git এবং Gatsby CLI সম্পর্কে জেনেছেন এবং শিখেছেন কিভাবে এগুলো ইন্সটল করতে হয়
+- Gatsby CLI দিয়ে একটি নতুন সাইট বানিয়েছেন
+- Gatsby ডেভেলপমেন্ট সার্ভার চালিয়েছেন এবং লোকালি আপনার সাইটটি ব্রাউজ করে দেখেছেন
+- একটি কোড এডিটর ডাউনলোড করেছেন
+- Prettier নামের একটি কোড ফরম্যাটার ইন্সটল করেছেন
 
-Now, move on to [**getting to know Gatsby building blocks**](/tutorial/part-one/).
+এখন আপনি [**Gatsby এর বিল্ডিং ব্লক**](/tutorial/part-one/) সম্পর্কে জানার সেকশনে চলে যান।
 
-## References
+## তথ্যসূত্র
 
-### Overview of core technologies
+### কোর টেকনোলজিগুলোর সংক্ষিপ্ত বিবরন
 
-It’s not necessary to be an expert with these already — if you’re not, don’t worry! You’ll pick up a lot through the course of this tutorial series. These are some of the main web technologies you’ll use when building a Gatsby site:
+এগুলোর উপর এখন ই অভিজ্ঞ না হলেও ভয় পাওয়ার কিছু নেই! এই টিউটোরিয়াল সিরিজের মাধ্যমে আপনি এগুলোর সম্পর্কে অনেক কিছুই শিখে ফেলতে পারবেন। Gatsby দিয়ে সাইট তৈরির জন্য এই ওয়েব টেকনোলজিগুলো ই প্রধানত প্রয়োজন হবেঃ
 
-- **HTML**: A markup language that every web browser is able to understand. It stands for HyperText Markup Language. HTML gives your web content a universal informational structure, defining things like headings, paragraphs, and more.
-- **CSS**: A presentational language used to style the appearance of your web content (fonts, colors, layout, etc). It stands for Cascading Style Sheets.
-- **JavaScript**: A programming language that helps us make the web dynamic and interactive.
-- **React**: A code library (built with JavaScript) for building user interfaces. It’s the framework that Gatsby uses to build pages and structure content.
-- **GraphQL**: A query language that allows you to pull data into your website. It’s the interface that Gatsby uses for managing site data.
+- **HTML**: হচ্ছে একটি মার্কআপ ল্যাঙ্গুয়েজ যা সকল ওয়েব ব্রাউজার ই বুঝতে পারে। HTML হচ্ছে HyperText Markup Language এর সংক্ষিপ্ত রুপ। HTML ওয়েব কন্টেন্ট কে একটি ইউনিভার্সাল ইনফরমেশন স্ট্রাকচার দেয় যার মাধ্যমে হেডিং, প্যারাগ্রাফ এসব ডিফাইন করা যায়।
+- **CSS**: একটি প্রেজেন্টেশনাল ল্যাঙ্গুয়েজ যার মাধ্যমে ওয়েব কন্টেন্টের (ফন্ট, রং, লে আউট, ইত্যাদি) চেহারা পরিবর্তন এবং সুন্দর করা যায়। CSS হচ্ছে Cascading Style Sheets  এর সংক্ষেপ।
+- **JavaScript**: একটি প্রোগ্রামিং ল্যাঙ্গুয়েজ যা  ওয়েবকে ডায়নামিক এবং ইন্টেরাক্টিভ করতে সাহায্য করে। 
+- **React**: একটি কোড লাইব্রেরী যা JavaScript দিয়ে তৈরি এবং ইউজার ইন্টারফেস বানানোর কাজে ব্যবহার হয়। Gatsby এর মাধ্যমেই পেইজ তৈরি করে থাকে।
+- **GraphQL**: হচ্ছে একটা কোয়েরি ল্যাঙ্গুয়েজ যা ওয়েবসাইটে ডাটা নিয়ে আসা যায়। Gatsby এর মাধ্যমেই সাইটের ডাটা ব্যাবস্থাপনা করে থাকে।
 
-### What is a website?
+### ওয়েবসাইট কি?
 
-For a comprehensive introduction to what a website is -- including an intro to HTML and CSS -- check out “[**Building your first web page**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)”. It’s a great place to start learning about the web. For a more hands-on introduction to [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), and [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), check out the tutorials from Codecademy. [**React**](https://reactjs.org/tutorial/tutorial.html) and [**GraphQL**](https://graphql.org/graphql-js/) also have their own introductory tutorials.
+একটা ওয়েবসাইট কি তার বিস্তারিত জানতে  “[**আপনার প্রথম ওয়েবসাইট তৈরি**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)” দেখুন। ওয়েব সম্পর্কে জানতে এটা একটা অসাধারণ জায়গা। [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), এবং [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript) সম্পর্কে আরো গভীরভাবে জানতে Codecademy এর টিউটোরিয়ালগুলো দেখুন। [**React**](https://reactjs.org/tutorial/tutorial.html) এবং [**GraphQL**](https://graphql.org/graphql-js/) এর ও নিজস্ব টিউটোরিয়াল রয়েছে।
 
-### Learn more about the command line
+### কমান্ড লাইন সম্পর্কে আরো জানুন
 
-For a great introduction to using the command line, check out [**Codecademy’s Command Line tutorial**](https://www.codecademy.com/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command) for Mac and Linux users, and [**this tutorial**](https://www.computerhope.com/issues/chusedos.htm) for Windows users. Even if you are a Windows user, the first page of the Codecademy tutorial is a valuable read. It explains what the command line is, not just how to interface with it.
+কমান্ড লাইন সম্পর্কে আরো জানতে Codecademy এর  [**Mac এবং Linux এর কমান্ড লাইন টিউটোরিয়াল**](https://www.codecademy.com/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command) এবং [**Windows এর কমান্ড লাইন টিউটোরিয়াল**](https://www.computerhope.com/issues/chusedos.htm) দেখুন। আপনি যদি Window ব্যবহারকারীও হয়ে থাকেন তাও Codecademy এর Mac এবং Linux এর কমান্ড লাইন টিউটোরিয়ালের প্রথম পেইজ আপনাকে অনেক মূল্যবান তথ্য দেবে। এটা আপনাকে কমান্ড লাইন শুধু কিভাবে ব্যবহার করবেন তা না জানিয়ে তা আসলে কি তার ব্যাখ্যা দেবে।
 
-### Learn more about npm
+### npm সম্পর্কে আরো জানুন
 
-npm is a JavaScript package manager. A package is a module of code that you can choose to include in your projects. If you just downloaded and installed Node.js, npm was installed with it!
+npm হচ্ছে একটি JavaScript প্যাকেজ ম্যানেজার। প্যাকেজ হচ্ছে একটা কোড মডিউল যা আপনি আপনার প্রজেক্টে অন্তর্ভুক্ত করতে পারেন। আপনি যদি Node.js মাত্রই ডাউনলোড এবং ইন্সটল করে থাকেন, npm তার সাথেই ইন্সটল হয়ে গিয়েছে!
 
-npm has three distinct components: the npm website, the npm registry, and the npm command line interface (CLI).
+npm এর তিনটি পৃথক্ অংশ আছেঃ npm ওয়েবসাইট, npm রেজিস্ট্রি, এবং npm CLI বা কমান্ড লাইন ইন্টারফেস।
 
-- On the npm website, you can browse what JavaScript packages are available in the npm registry.
-- The npm registry is a large database of information about JavaScript packages available on npm.
-- Once you’ve identified a package you want, you can use the npm CLI to install it in your project or globally (like other CLI tools). The npm CLI is what talks to the registry — you generally only interact with the npm website or the npm CLI.
+- npm এর ওয়েবসাইটে আপনি ব্রাউজ করতে পারবেন npm রেজিস্ট্রিতে কোন কোন JavaScript প্যাকেজ রয়েছে।
+- npm রেজিস্ট্রি হচ্ছে JavaScript এর যেসব প্যাকেজ npm এ রয়েছে তার একটি বড় ডাটাবেইজ।
+- আপনি কোন একটি প্যাকেজ যদি ব্যবহারের জন্য মনঃস্থির করে থাকেন তাহলে npm CLI এর মাধ্যমে তা আপনার প্রজেক্টে অথবা গ্লোবালি (অন্যান্য CLI টুলগুলোর মত) ইন্সটল করতে পারবেন। npm CLI ই npm রেজিস্ট্রির সাথে যোগাযোগ করবে, আপনি মূলত npm ওয়েবসাইট এবং CLI ই ব্যবহার করবেন।
 
-> 💡 Check out npm’s introduction, “[**What is npm?**](https://docs.npmjs.com/getting-started/what-is-npm)”.
+> 💡 npm সম্পর্কে আরো জানতে  “[**npm কি?**](https://docs.npmjs.com/getting-started/what-is-npm) তা দেখুন।
 
-### Learn more about Git
+### Git সম্পর্কে আরো জানুন
 
-You will not need to know Git to complete this tutorial, but it is a very useful tool. If you are interested in learning more about version control, Git, and GitHub, check out GitHub's [Git Handbook](https://guides.github.com/introduction/git-handbook/).
+এই টিউটোরিয়াল শেষ করতে আপনার Git সম্পর্কে জানার প্রয়োজন নেই। কিন্তু এটা খুব ই দরকারী একটি টুল। আপনি যদি ভার্সন কন্ট্রোল, Git এবং GitHub নিয়ে আরো জানতে চান তাহলে [Git হ্যান্ডবুক](https://guides.github.com/introduction/git-handbook/) দেখুন।
