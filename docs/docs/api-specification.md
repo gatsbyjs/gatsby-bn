@@ -1,74 +1,76 @@
 ---
-title: API Specification
+title: API স্পেসিফিকেশন
 ---
 
-Gatsby's APIs are tailored conceptually to some extent after React.js to improve the coherence between the two systems.
+Gatsbyর APIগুলি ধারণাগতভাবে কিছুটা React.js এর মতো বানানো যাতে দুটি সিস্টেম এর মধ্যেকার সংহতি আরো ভালো হয়|
 
-The two top priorities of the API are a) enable a broad and robust plugin ecosystem and b) on top of that a broad and robust theme ecosystem.
+APIটির প্রথম দুটি প্রাধান্য হলো - a) একটি বিস্তৃত আর বলিষ্ঠ প্লাগিন ইকোসিস্টেম কে সক্ষম করা, এবং b) তার ওপর একটি বিস্তৃত আর বলিষ্ঠ থিম ইকোসিস্টেম বানানো।
 
-## Prerequisites
+## যা যা লাগবে
 
-If you’re not familiar with Gatsby’s lifecycle, see the overview [Gatsby Lifecycle APIs](/docs/gatsby-lifecycle-apis/).
+আপনি যদি Gatsbyর লাইফসাইকেল-এর সাথে পরিচিত না হন, তাহলে [Gatsby লাইফসাইকেল API সমূহ](/docs/gatsby-lifecycle-apis/)ওভারভিউ দেখুন|
 
-## Plugins
+## প্লাগইন
 
-Plugins can extend Gatsby in many ways:
+প্লাগইন্স Gatsby কে অনেক ভাবে প্রসারিত করতে পারে:
 
-- Sourcing data (e.g. from the filesystem or an API or a database)
-- Transforming data from one type to another (e.g. a markdown file to HTML)
-- Creating pages (e.g. a directory of markdown files all gets turned into pages with URLs derived from their file names).
-- Modifying webpack config (e.g. for styling options, adding support for other compile-to-js languages)
-- Adding things to the rendered HTML (e.g. meta tags, analytics JS snippets like Google Analytics)
-- Writing out things to build directory based on site data (e.g. service worker, sitemap, RSS feed)
+- ডাটা সোর্স করা (যেমন, ফাইলসিস্টেম অথবা API অথবা একটি ডাটাবেস থেকে)
+- ডাটাকে বিভিন্ন প্রকারে রূপান্তর করা (যেমন, মার্কডাউন ফাইল থেকে HTML)
+- পেজ বানানো (যেমন, একটি মার্কডাউন ফাইল এর ডিরেক্টরি থেকে পেজ সমূহে রূপান্তর করা, এবং ফাইলনেম থেকে URL জেনারেট করা)
+- ওয়েবপ্যাক কনফিগ মডিফাই করা (যেমন, স্টাইলিং বিকল্পের জন্য, অন্যান্য compile-to-js ভাষার জন্য সাপোর্ট যোগ করা)
+- রেন্ডারড HTML-এ জিনিস যুক্ত করা (যেমন, মেটা ট্যাগ্স, Google Analytics-এর মতো বিশ্লেষণ-সম্পর্কিত জাভাস্ক্রিপ্ট স্নিপেট)
+- সাইট ডেটার উপর ভিত্তি করে ডিরেক্টরি তৈরি করার জন্য জিনিসগুলি লেখা (যেমন, সার্ভিস ওয়ার্কার, সাইটম্যাপ, RSS ফিড)
 
-A single plugin can use multiple APIs to accomplish its purpose. E.g. the plugin for the CSS-in-JS library [Glamor](/packages/gatsby-plugin-glamor/):
+একটি একক প্লাগইন উদ্দেশ্য সাধনের জন্য একাধিক API ব্যবহার করতে পারে| যেমন, CSS-in-JS লাইব্রেরির জন্য প্লাগইন [Glamor](/packages/gatsby-plugin-glamor/):
 
-1.  modifies the webpack config to add its plugin
-2.  adds a Babel plugin to replace React's default createElement
-3.  modifies server rendering to extract out the critical CSS for each rendered page and inline the CSS in the `<head>` of that HTML page.
+1.  প্লাগইন যুক্ত করতে ওয়েবপ্যাক কনফিগারেশনটি পরিবর্তন করে|
+2.  React-এর ডিফল্ট createElement রিপ্লেস করতে একটি ব্যাবেল প্লাগইন যুক্ত করে|
+3.  প্রতিটি রেন্ডার করা পেজ-এর জন্য প্রয়োজনীয় CSS বের করা, এবং HTML পেজ-এর `<head>`-এ CSS ইনলাইন করার জন্য সার্ভার রেন্ডারিং পরিবর্তন করা|
 
-Plugins can also depend on other plugins. [The Sharp plugin](/packages/gatsby-plugin-sharp/) exposes a number of high-level APIs for transforming images that several other Gatsby image plugins depend on. [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) does basic markdown->html transformation but exposes an API to allow other plugins to intervene in the conversion process e.g. [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) which adds highlighting to code blocks.
+প্লাগইনগুলি অন্যান্য প্লাগইনগুলির উপরও নির্ভর করতে পারে| [The Sharp plugin](/packages/gatsby-plugin-sharp/) ছবি রূপান্তর করার জন্য বেশ কয়েকটি উচ্চ স্তরের API প্রকাশ করে যার ওপর বেশ কয়েকটি অন্যান্য Gatsby ইমেজ প্লাগইন নির্ভর করে| [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) বেসিক মার্কডাউন->HTML-এ রূপান্তর করে তবে রূপান্তর প্রক্রিয়ায় অন্যান্য প্লাগইনগুলিকে হস্তক্ষেপ করার অনুমতি দেওয়ার জন্য একটি API প্রকাশ করে যেমন, [gatsby-remark-prismjs](/packages/gatsby-remark-prismjs/) যা কোড ব্লক কে হাইলাইট করে|
 
-Transformer plugins are decoupled from source plugins. Transformer plugins look at the media type of new nodes created by source plugins to decide if they can transform it or not. Which means that a markdown transformer plugin can transform markdown from any source without any other configuration e.g. from a file, a code comment, or external service like Trello which supports markdown in some of its data fields.
+ট্রান্সফর্মার প্লাগইনগুলি সোর্স প্লাগইনগুলি থেকে ডিকাপেল করা থাকে| ট্রান্সফর্মার প্লাগইনগুলি সোর্স প্লাগইনগুলির তৈরি করা নতুন নোডগুলির মিডিয়া টাইপ দেখে নির্ধারণ করে যে তারা সেটিকে পরিবর্তন করতে পারবে না পারবে না|
+যার অর্থ একটি মার্কডাউন ট্রান্সফর্মার প্লাগইন অন্য কোনও কনফিগারেশন ছাড়াই যে কোনো উৎস থেকে মার্কডাউন পরিবর্তন করতে পারে যেমন, একটি ফাইল থেকে, একটি কোড কমেন্ট, বা ট্রেলো-এর মতো বাহ্যিক পরিষেবা যা কিছু ডেটা ফিল্ডে মার্কডাউন সাপোর্ট করে|
 
-See [the full list of (official only for now — adding support for community plugins later) plugins](/docs/plugins/).
+[প্লাগইন সমূহের সম্পূর্ণ তালিকা (এখনের জন্য শুধুমাত্র অফিসিয়াল — কমিউনিটি প্লাগইনগুলি পরে সাপোর্ট করা হবে)](/docs/plugins/) দেখুন|
 
 ## API
 
-### Concepts
+### ধারণা
 
-- _Page_ — a site page with a pathname, a template component, and optional GraphQL query.
-- _Page Component_ — React.js component that renders a page and can optionally specify a GraphQL query
-- _Component extensions_ — extensions that are resolvable as components. `.js` and `.jsx` are supported by core. But plugins can add support for other compile-to-js languages.
-- _Dependency_ — Gatsby automatically tracks dependencies between different objects e.g. a page can depend on certain nodes. This allows for hot reloading, caching, incremental rebuilds, etc.
-- _Node_ — a data object
-- _Node Field_ — a field added by a plugin to a node that it doesn't control
-- _Node Link_ — a connection between nodes that gets converted to GraphQL relationships. Can be created in a variety of ways as well as automatically inferred. Parent/child links from nodes and their transformed derivative nodes are first class links.
+- _Page_ — একটি পাথনেম, একটি টেম্পলেট কম্পোনেন্ট, এবং একটি অপ্শনাল GraphQL কোয়েরি সহ একটি সাইট পেজ|
+- _Page Component_ — একটি React.js কম্পোনেন্ট যা কোনও পেজ কে রেন্ডার করে এবং অপ্শনালী একটি GraphQL কোয়েরি নির্দিষ্ট করতে পারে|
+- _Component extensions_ — এক্সটেনশন যেগুলি কম্পোনেন্ট হিসেবে সমাধানযোগ্য| `.js` এবং `.jsx` কোর দ্বারা সাপোর্টেড| তবে প্লাগইনগুলি অন্যান্য compile-to-js ভাষার জন্য সাপোর্ট যোগ করতে পারে|
+- _Dependency_ — Gatsby স্বয়ংক্রিয়ভাবে বিভিন্ন অবজেক্ট-এর মধ্যে ডিপেন্ডেন্সি ট্র্যাক করে যেমন, একটি পেজ নির্দিষ্ট কয়েকটি নোডের উপর নির্ভর করতে পারে| এটি হট রিলোডিং, ক্যাশিং, ইনক্রিমেন্টাল রিবিল্ড ইত্যাদি করতে সাহায্য করে|
+- _Node_ — একটি ডাটা অবজেক্ট
+- _Node Field_ — একটি নোডে একটি প্লাগইন দ্বারা যুক্ত ফিল্ড যা প্লাগইনটি নিয়ন্ত্রণ করে না|
+- _Node Link_ — নোডগুলির মধ্যে একটি সংযোগ যা GraphQL সম্পর্কের মধ্যে রূপান্তরিত হয়| এটি বিভিন্নভাবে তৈরি করা যায় এবং পাশাপাশি স্বয়ংক্রিয়ভাবে অনুমান ও করা যায়| নোডগুলি এবং তাদের রুপান্তরিত ডেরিভেটিভ নোডগুলি থেকে প্যারেন্ট/চাইল্ড লিঙ্কগুলি প্রথম শ্রেণীর লিঙ্ক।
 
-_More definitions and terms are defined in the [Glossary](/docs/glossary/)_
+_[গ্লোসারিতে](/docs/glossary/) আরও সংজ্ঞা এবং পদগুলি সংজ্ঞায়িত করা হয়েছে_
 
-### Operators
+### অপারেটর সমূহ
 
-- _Create_ — make a new thing
-- _Get_ — get an existing thing
-- _Delete_ — remove an existing thing
-- _Replace_ — replace an existing thing
-- _Set_ — merge into an existing thing
+- _Create_ — একটি নতুন জিনিস বানানো
+- _Get_ — একটি বিদ্যমান জিনিস নিয়ে আসা
+- _Delete_ — একটি বিদ্যমান জিনিস রিমুভ করা
+- _Replace_ — একটি বিদ্যমান জিনিস রিপ্লেস করা
+- _Set_ — একটি বিদ্যমান জিনিসে একত্রিত করা
 
-### Extension APIs
+### এক্সটেনশন API সমূহ
 
-Gatsby has multiple processes. The most prominent is the "bootstrap" process. It has several subprocesses. One tricky part to their design is that they run both once during the initial bootstrap but also stay alive during development to continue to respond to changes. This is what drives hot reloading that all Gatsby data is "alive" and reacts to changes in the environment.
+Gatsbyতে একাধিক প্রক্রিয়া রয়েছে| তাদের মধ্যে সবচেয়ে বিশিষ্ট হলো "বুটস্ট্র্যাপ" প্রক্রিয়া| এটির বেশ কয়েকটি উপ-প্রক্রিয়া রয়েছে| তাদের ডিজাইনের একটি জটিল অংশ হলো তারা প্রাথমিক বুটস্ট্র্যাপের সময় একবার রান করে, এবং পরিবর্তনের প্রতিক্রিয়া অব্যাহত রাখতে ডেভেলপমেন্ট-এর সময়ও জীবিত থাকে| এটি হট রিলোড কে চালায় যা সমস্ত Gatsbyর ডেটা-কে "জীবিত" এবং পরিবেশের পরিবর্তনের জন্য প্রতিক্রিয়া জানাতে সক্ষম করে|
 
-The bootstrap process is as follows:
+বুটস্ট্র্যাপ প্রক্রিয়াটি নিম্নরূপ:
 
 load site config -> load plugins -> source nodes -> transform nodes -> create graphql schema -> create pages -> compile component queries -> run queries -> fin
 
-Once the initial bootstrap is finished, a `webpack-dev-server` and express server are started for serving files for the development workflow with live updates. For a production build, Gatsby skips the development server and instead builds the CSS, then JavaScript, then static HTML with webpack.
+প্রাথমিক বুটস্ট্র্যাপ শেষ হয়ে গেলে, একটি `webpack-dev-server` এবং express server স্টার্ট করা হয় ডেভেলপমেন্ট ওয়ার্কফ্লোতে লাইভ আপডেটের সাথে ফাইল সার্ভ করার জন্য| একটি প্রোডাকশন বিল্ড-এর জন্য, Gatsby ডেভেলপমেন্ট সার্ভারটি এড়িয়ে যায় এবং পরিবর্তে CSS, তারপরে জাভাস্ক্রিপ্ট, তারপরে ওয়েবপ্যাক সহ স্ট্যাটিক HTML তৈরি করে|
 
-During these processes there are various extension points where plugins can intervene. All major processes have an `onPre` and `onPost` e.g. `onPreBootstrap` and `onPostBootstrap` or `onPreBuild` or `onPostBuild`. During bootstrap plugins can respond at various stages to APIs like `onCreatePages`, `onCreateBabelConfig`, and `onSourceNodes`.
+এই প্রক্রিয়াগুলির সময় বিভিন্ন এক্সটেনশন পয়েন্ট রয়েছে যেখানে প্লাগইনগুলি হস্তক্ষেপ করতে পারে| সমস্ত বড় প্রক্রিয়ার কাছে একটি `onPre` এবং `onPost` থাকে যেমন, `onPreBootstrap` এবং `onPostBootstrap` অথবা `onPreBuild` এবং `onPostBuild`. বুটস্ট্র্যাপ চলাকালীন প্লাগইনগুলি বিভিন্ন পর্যায়ে API-এর উপর প্রতিক্রিয়া জানাতে পারে, যেমন `onCreatePages`, `onCreateBabelConfig`, এবং `onSourceNodes`|
 
-At each extension point, Gatsby identifies the plugins which implement the API and calls them in serial following their order in the site's `gatsby-config.js`.
+প্রতিটি এক্সটেনশন পয়েন্টে, যে প্লাগইনগুলি API ইমপ্লিমেন্ট করে, Gatsby তাদের সনাক্ত করে এবং সাইটের `gatsby-config.js`-এ তাদের ক্রম অনুসরণ করে সিরিয়ালি তাদের কল করে|
 
-In addition to extension APIs in a node, plugins can also implement extension APIs in the server rendering process and the browser e.g. `onClientEntry` or `onRouteUpdate`.
+কোনও নোডে এক্সটেনশন API গুলি ছাড়াও, প্লাগইনগুলি সার্ভার রেন্ডারিং প্রক্রিয়া এবং ব্রাউজার-এও এক্সটেনশন API গুলি প্রয়োগ করতে পারে যেমন, `onClientEntry` অথবা `onRouteUpdate`|
 
-The three main inspirations for this API and spec are React.js' API specifically [@leebyron's email on the React API](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), this talk ["How to Design a Good API and Why it Matters" by Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) who designed many parts of Java, and [Hapi.js](https://hapijs.com/api)' plugin design.
+এই API এবং স্পেক-এর জন্য প্রধান তিনটি অনুপ্রেরণা হলো React.js-এর API বিশেষত [React API-এর উপর @leebyron-এর ইমেল ](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), [Joshua Bloch এর বক্তৃতা "How to Design a Good API and Why it Matters"](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) - যিনি জাভার অনেক অংশ ডিজাইন করেছেন, এবং [Hapi.js](https://hapijs.com/api)-এর প্লাগইন ডিজাইন|
+
