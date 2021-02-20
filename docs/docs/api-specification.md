@@ -72,4 +72,3 @@ load site config -> load plugins -> source nodes -> transform nodes -> create gr
 কোনও নোডে এক্সটেনশন API গুলি ছাড়াও, প্লাগইনগুলি সার্ভার রেন্ডারিং প্রক্রিয়া এবং ব্রাউজার-এও এক্সটেনশন API গুলি প্রয়োগ করতে পারে যেমন, `onClientEntry` অথবা `onRouteUpdate`|
 
 এই API এবং স্পেক-এর জন্য প্রধান তিনটি অনুপ্রেরণা হলো React.js-এর API বিশেষত [React API-এর উপর @leebyron-এর ইমেল ](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed), [Joshua Bloch এর বক্তৃতা "How to Design a Good API and Why it Matters"](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop) - যিনি জাভার অনেক অংশ ডিজাইন করেছেন, এবং [Hapi.js](https://hapijs.com/api)-এর প্লাগইন ডিজাইন|
-
