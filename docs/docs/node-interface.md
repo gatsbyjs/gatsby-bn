@@ -1,13 +1,13 @@
 ---
-title: Node Interface
+title: Node ইন্টারফেস
 ---
 
-The "node" is the center of Gatsby's data system. All data that's added to
-Gatsby is modeled using nodes.
+"node" Gatsbyর ডেটা সিস্টেমের কেন্দ্র। Gatsbyতে যুক্ত করা সমস্ত ডেটা
+নোড ব্যবহার করে মডেল করা হয়েছে।
 
-## Node data structure
+## নোড ডেটা স্ট্রাকচার 
 
-The basic node data structure is as follows:
+বেসিক নোড ডেটা স্ট্রাকচারটি নিম্নরূপ:
 
 ```flow
 id: String,
@@ -27,66 +27,66 @@ internal: {
 
 ### `parent`
 
-A key reserved for plugins who wish to extend other nodes.
+অন্য নোডগুলি প্রসারিত করতে ইচ্ছুক এমন প্লাগইনগুলির জন্য সংরক্ষিত একটি key।
 
 ### `contentDigest`
 
-A digest "Hash", or short digital summary, of the content of this node (for example, `md5sum`).
+এই নোডের সামগ্রীর একটি ডাইজেস্ট "Hash" বা সংক্ষিপ্ত ডিজিটাল সারাংশ (যেমন, `md5sum`)|
 
-The digest should be unique to the content of this node since it's used for caching. If the content changes, this digest should also change. There's a helper function called [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) to create an `md5` digest.
+ডাইজেস্ট এই নোডের বিষয়বস্তুর সাথে অনন্য হওয়া উচিত কারণ এটি ক্যাশিং-এর জন্য ব্যবহৃত হয়। যদি বিষয়বস্তু পরিবর্তন হয় তবে এই ডাইজেস্টও পরিবর্তন করা উচিত. এখানে একটি `md5` নামের ডাইজেস্ট তৈরি করার জন্য [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) নামের একটি সহায়ক ফাংশন রয়েছে|
 
 ### `mediaType`
 
-Optional [media type](https://en.wikipedia.org/wiki/Media_type) to indicate to transformer plugins this node has data they can further process.
+ অপ্শনাল [media type](https://en.wikipedia.org/wiki/Media_type) যে ট্রান্সফর্মার প্লাগইনগুলিতে ইঙ্গিত করতে পারে যে এই নোডে আরও এমন ডেটা রয়েছে যার ওপর তারা প্রক্রিয়া করতে পারে।
 
 ### `type`
 
-A globally unique node type chosen by the plugin owner.
+প্লাগইন ওনার দ্বারা নির্বাচিত একটি গ্লোবালি অনন্য নোড টাইপ।
 
 ### `owner`
 
-The plugin which created this node. This field is added by gatsby itself (and not the plugin).
+এই নোডটি তৈরি করে এমন প্লাগইন. এই ক্ষেত্রটি Gatsbyর দ্বারাই যুক্ত হয় (এবং প্লাগইন দ্বারা নয়)|
 
 ### `fieldOwners`
 
-Stores which plugins created which fields. This field is added by gatsby itself (and not the plugin).
+কোন প্লাগইনগুলি কোন ক্ষেত্র তৈরি করেছে তা স্টোর করে. এই ক্ষেত্রটি Gatsbyর দ্বারাই যুক্ত হয় (এবং প্লাগইন দ্বারা নয়)|
 
 ### `content`
 
-Optional field exposing the raw content for this node that transformer plugins can take and further process.
+অপ্শনাল ক্ষেত্র যা ট্রান্সফর্মার প্লাগইনগুলি নিতে এবং আরও প্রক্রিয়া করতে পারে এমন নোডের raw কনটেন্ট উন্মুক্ত করে।
 
-## Source plugins
+## সোর্স প্লাগিন সমূহ
 
-New nodes are added to Gatsby by "source" plugins. A common one that many Gatsby
-sites use is the [Filesystem source plugin](/packages/gatsby-source-filesystem/)
-which turns files on disk into File nodes.
+Gatsbyতে নতুন নোড "সোর্স" প্লাগইনগুলি দ্বারা যুক্ত করা হয়. একটি প্রচলিত "সোর্স" প্লাগইন যা অনেক গ্যাটসবি
+সাইট দ্বারা ব্যবহৃত হয় সেটা হলো [Filesystem source plugin](/packages/gatsby-source-filesystem/)
+যা ডিস্ক--এর ফাইলগুলিকে ফাইল নোডে রূপান্তরিত করে|
 
-Other source plugins pull data from external APIs such as the
-[Drupal](/packages/gatsby-source-drupal/) and
+অন্যান্য সোর্স প্লাগিন বাহ্যিক এপিআই থেকে ডেটা টানে, যেমন
+[Drupal](/packages/gatsby-source-drupal/) আর
 [Hacker News](/packages/gatsby-source-hacker-news/)
 
-## Transformer plugins
+## ট্রান্সফরমার প্লাগিন সমূহ
 
-Transformer plugins can also create nodes by transforming source nodes into new
-types of nodes. It is very common when building Gatsby sites to install both
-source plugin(s) and transformer plugins.
+ট্রান্সফর্মার প্লাগইনগুলি সোর্স নোডগুলিকে রূপান্তর করে নতুন ধরণের নোড তৈরি করতে পারে|
+গ্যাটসবি সাইট তৈরি করার সময় সোর্স প্লাগিন সমূহ আর ট্রান্সফরমার প্লাগিন সমূহ 
+উভয়কেই ইনস্টল করা খুব প্রচলিত|
 
-Nodes created by transformer plugins are set as "children" of their "parent"
-nodes.
+ট্রান্সফর্মার প্লাগইনগুলির দ্বারা তৈরি নোডগুলি তাদের "parent"-এর 
+"child" হিসাবে সেট করা হয়|
 
-- The
-  [Remark (Markdown library) transformer plugin](/packages/gatsby-transformer-remark/)
-  looks for new nodes that are created with a `mediaType` of `text/markdown` and
-  then transforms these nodes into `MarkdownRemark` nodes with an `html` field.
-- The [YAML transformer plugin](/packages/gatsby-transformer-yaml/) looks for
-  new nodes with a media type of `text/yaml` (e.g. a `.yaml` file) and creates
-  new YAML child node(s) by parsing the YAML source into JavaScript objects.
+- [Remark (মার্কডাউন লাইব্রেরি) ট্রান্সফরমার প্লাগিন](/packages/gatsby-transformer-remark/)
+  `mediaType` ও `text/markdown` দিয়ে বানানো নতুন নোড-এর খোঁজ করে 
+  এবং সেই নোডগুলিকে `html` ক্ষেত্র-সমেত `MarkdownRemark` নোড সমূহে 
+  রূপান্তর করে|
+- [YAML ট্রান্সফরমার প্লাগিন](/packages/gatsby-transformer-yaml/) 
+`text/yaml` মিডিয়া টাইপ সমেত নতুন নোড (যেমন, একটি `.yaml` ফাইল)-এর খোঁজ করে 
+এবং YAML সোর্স-কে জাভাস্ক্রিপ্ট অবজেক্টে পার্স করে নতুন YAML চাইল্ড নোড তৈরী করে|
 
 ## GraphQL
 
-Gatsby automatically infers the structure of your site's nodes and creates a
-GraphQL schema which you can then query from your site's components.
+Gatsby স্বয়ংক্রিয়ভাবে আপনার সাইটের নোড স্ট্রাকচার অনুমান করে এবং একটি GraphQL স্কিমা তৈরি করে
+যা আপনি আপনার সাইটের কম্পোনেন্ট-গুলির থেকে কোয়েরি করতে পারেন।
 
-## Node Creation
+## নোড ক্রিয়েশন
 
-To learn more about how nodes are created and linked together, check out the [Node Creation](/docs/node-creation/) documentation in the "Behind the Scenes" section.
+নোড কীভাবে তৈরি এবং একসাথে লিঙ্ক করা হয় সে সম্পর্কে আরও জানার জন্য, [নোড ক্রিয়েশন](/docs/node-creation/) ডকুমেন্টেশন-এর "Behind the Scenes" অধ্যায় দেখুন|
