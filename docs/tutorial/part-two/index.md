@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+title: Gatsby তে স্টাইলিংয়ের পরিচিতি
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,32 +14,32 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+Gatsby টিউটোরিয়ালের দ্বিতীয় পার্টে স্বাগতম!
 
-## What's in this tutorial?
+## এই টিউটোরিয়ালে কি আছে?
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+এই পার্টে আপনি Gatsby ওয়েবসাইট স্টাইলিংয়ের বিভিন্ন বিষয়গুলি অনুসন্ধান করবেন এবং ওয়েবসাইট তৈরিতে React কম্পোনেন্ট ব্যবহারের গভীর ধারণা পাবেন।
 
-## Using global styles
+## Global Style সমূহ ব্যবহার
 
-Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site — much like the color and texture of a wall sets the overall feel of a room.
+প্রত্যেক সাইটের কিছু Global Style থাকে। এতে সাইটের টাইপোগ্রাফি এবং ব্যাকগ্রাউন্ড কালার এর মত জিনিসগুলো থাকে। এই স্টাইলগুলি সাইটটি সামগ্রিকভাবে কেমন লাগবে তা নির্ধারণ করে - অনেকটা ঘরের দেয়ালের রঙ এবং টেক্সচার যেমন সেই ঘরটিতে যেমন লাগে তা নির্ধারণ করে।
 
-### Creating global styles with standard CSS files
+### স্ট্যান্ডার্ড CSS ফাইলের মাধ্যমে Global Style সমূহ তৈরি
 
-One of the most straightforward ways to add global styles to a site is using a global `.css` stylesheet.
+সাইটে Global Style যুক্ত করার সহজতম উপায়গুলির একটি হচ্ছে Global `.css` স্টাইলশিট।
 
-#### ✋ Create a new Gatsby site
+#### ✋ একটি নতুন Gatsby সাইট তৈরি
 
-Start by creating a new Gatsby site. It may be best (especially if you're new to the command line) to close the terminal windows you used for [part one](/tutorial/part-one/) and start a new terminal session for part two.
+একটি নতুন Gatsby সাইট তৈরির মাধ্যমে শুরু করুন। ভালো হয় যদি (বিশেষ করে করে কমান্ড লাইনে নতুনদের ক্ষেত্রে) [পার্ট এক](/tutorial/part-one/) এ যেই terminal windows ব্যবহার করেছিলে তা বন্ধ করেন এবং পার্ট দুই এর জন্য নতুন terminal সেশন শুরু করেন।
 
-Open a new terminal window, create a new "hello world" Gatsby site in a directory called `tutorial-part-two`, and then move to this new directory:
+নতুন terminal window খুলুন, `tutorial-part-two` ডিরেকটোরিতে একটি নতুন "hello world" Gatsby সাইট তৈরি করুন, এবং এই ডিরেকটোরিতে যান:
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
-You now have a new Gatsby site (based on the Gatsby "hello world" starter) with the following structure:
+এখন আপনার কাছে এরকম স্ট্রাকচারের একটি নতুন একটি Gatsby সাইট (Gatsby "hello world" স্টার্টারে উপর ভিত্তি করে) আছে:
 
 ```text
 ├── package.json
