@@ -1,38 +1,38 @@
 ---
-title: "Recipes: Working with Starters"
-tableOfContentsDepth: 1
+শিরোনাম: "রেসিপি: স্টার্টারের সাথে কাজ করা"
+টেবিলঅফ বিষয়বস্তুর গভীরতা: 1
 ---
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+[স্টার্টার](/docs/starters/) বয়লারপ্লেট গ্যাটসবি সাইটগুলি সরকারীভাবে বা সম্প্রদায় দ্বারা রক্ষণাবেক্ষণ করা হয়.
 
-## Using a starter
+### স্টার্টার ব্যবহার করা
 
-### Prerequisites
+### পূর্বশর্ত
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- [গ্যাটসবি সিএলআই](/docs/gatsby-cli) ইনস্টল করা হয়েছে।
 
-### Directions
+### দিকনির্দেশ
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+১. আপনি যে স্টার্টারটি ব্যবহার করতে চান তা খুঁজুন (_[স্টার্টার লাইব্রেরি](/starters/?v=2) দেখার জন্য একটি ভাল জায়গা!_ )
 
-2. Generate a new site based on the starter. In the terminal, run:
+২. স্টার্টারের উপর ভিত্তি করে একটি নতুন সাইট তৈরি করুন। টার্মিনালে, চালান:
 
 ```shell
 gatsby new {your-project-name} {link-to-starter}
 ```
 
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
+> _উপরের কমান্ডটি যেমন আছে তেমন চালাবেন না -- {your-project-name} এবং {link-to-starter} প্রতিস্থাপন করতে ভুলবেন না !_
 
-3. Run your new site:
+৩. আপনার নতুন সাইট চালান:
 
 ```shell
 cd {your-project-name}
 gatsby develop
 ```
 
-### Additional resources
+### অতিরিক্ত সম্পদ
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+- গ্যাটসবি স্টার্টার ব্যবহার করার জন্য [আরও বিস্তারিত নির্দেশিকা](/docs/starters/) অনুসরণ করুন ।
+- স্টার্টার ব্যবহার করার জন্য [Gatsby CLI](/docs/gatsby-cli) টুলটি কিভাবে ব্যবহার করতে হয় তা শিখুন [tutorial part one](/tutorial/part-one/#using-gatsby-starters)।
+- [স্টার্টার লাইব্রেরি](/starters/?v=2) ব্রাউজ করুন।
+- গ্যাটসবির [অফিসিয়াল ডিফল্ট স্টার্টার](https://github.com/gatsbyjs/gatsby-starter-default) দেখুন।
